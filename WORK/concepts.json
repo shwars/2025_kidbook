@@ -1,0 +1,23 @@
+[
+    {"name": "Грипп", "file": "gripp.md"},
+    {"name": "Коронавирус", "file": "covid.md"},
+    {"name": "Туберкулез", "file": "tuberculosis.md"},
+    {"name": "Диабет", "file": "diabetes.md"},
+    {"name": "Ревматоидный артрит", "file": "arthritis.md"},
+    {"name": "Гипертония", "file": "hypertension.md"},
+    {"name": "Астма", "file": "asthma.md"},
+    {"name": "Краснуха", "file": "rubella.md"},
+    {"name": "Бешенство", "file": "rabies.md"},
+    {"name": "СПИД", "file": "aids.md"},
+    {"name": "Лихорадка", "file": "fever.md"},
+    {"name": "Кашель", "file": "cough.md"},
+    {"name": "Головная боль", "file": "headache.md"},
+    {"name": "Одышка", "file": "shortness_of_breath.md"},
+    {"name": "Сыпь", "file": "rash.md"},
+    {"name": "Противовирусные препараты", "file": "antiviral.md"},
+    {"name": "Антибиотики", "file": "antibiotics.md"},
+    {"name": "Вакцинация", "file": "vaccination.md"},
+    {"name": "Анализ крови", "file": "blood_test.md"},
+    {"name": "Иммунная терапия", "file": "immune_therapy.md"}
+  ]
+  
