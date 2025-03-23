@@ -1,0 +1,74 @@
+%%{init: {'themeVariables': {'fontSize': '18px', 'spacing': 40}}}%%
+graph LR
+
+    classDef bigNode font-size:22px,fill:#D0F0C0,stroke:#008000,stroke-width:3px;
+    classDef positive fill:#B0E57C,stroke:#006400,stroke-width:2px;
+    classDef negative fill:#FF6B6B,stroke:#8B0000,stroke-width:2px;
+    classDef neutral fill:#FFD700,stroke:#DAA520,stroke-width:2px;
+    classDef category fill:#ADD8E6,stroke:#00008B,stroke-width:2px;
+
+    subgraph Личные_качества
+        A[Личное качество]:::bigNode
+        B[Положительные]:::positive
+        C[Отрицательные]:::negative
+        D[Нейтральные]:::neutral
+    end
+
+    subgraph Положительные_качества
+        E[Доброта]:::positive
+        F[Смелость]:::positive
+        G[Честность]:::positive
+        H[Щедрость]:::positive
+        I[Эмпатия]:::positive
+        N[Терпение]:::positive
+        O[Ответственность]:::positive
+    end
+
+    subgraph Отрицательные_качества
+        J[Лень]:::negative
+        K[Лицемерие]:::negative
+        L[Жадность]:::negative
+        M[Вспыльчивость]:::negative
+        P[Высокомерие]:::negative
+    end
+
+    subgraph Нейтральные_качества
+        Q[Сдержанность]:::neutral
+        R[Любопытство]:::neutral
+        S[Замкнутость]:::neutral
+    end
+
+    subgraph Категории
+        T[Категория]:::category
+        U[Эмоциональные]:::category
+        V[Моральные]:::category
+        W[Социальные]:::category
+    end
+
+    A --> B
+    A --> C
+    A --> D
+    B --> E
+    B --> F
+    B --> G
+    B --> H
+    B --> I
+    B --> N
+    B --> O
+    C --> J
+    C --> K
+    C --> L
+    C --> M
+    C --> P
+    D --> Q
+    D --> R
+    D --> S
+
+    T --> U
+    T --> V
+    T --> W
+
+    E -->|усиливает| I
+    G -->|противоположно| K
+    H -->|проявляется в| X[Дружба]:::positive
+    J -->|ослабляет| O
