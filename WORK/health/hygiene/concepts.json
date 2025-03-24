@@ -1,0 +1,36 @@
+{
+	"categories": [
+		"Личная гигиена": "../../../KIDBOOK/hygiene/concepts/personal_hygiene/personal_hygiene.md",
+		"Гигиена рук и ногтей": "../../../KIDBOOK/hygiene/concepts/hygiena_hands_and_nails/hygiena_hands_and_nails.md",
+		"Гигиена полости рта": "../../../KIDBOOK/hygiene/concepts/hygiena_mouse/hygiena_mouse.md",
+		"Гигиена тела и лица": "../../../KIDBOOK/hygiene/concepts/hygiene_body_face/hygiene_body_face.md",
+		"Гигиена одежды и обуви": "../../../KIDBOOK/hygiene/concepts/hygiene_clothes_shoes/hygiene_clothes_shoes.md",
+		"Гигиена сна": "../../../KIDBOOK/hygiene/concepts/hygiene_sleep/hygiene_sleep.md",
+		"Гигиена носа и ушей": "../../../KIDBOOK/hygiene/concepts/hygiene_nose_and_ear/hygiene_nose_and_ear.md",
+		"Гигиена игрушек и личных вещей": "../../../KIDBOOK/hygiene/concepts/hygiene_of_toys_and_personal _Items/hygiene_of_toys_and_personal _Items.md",
+		"Гигиена питания": "../../../KIDBOOK/hygiene/concepts/hygiene_food/hygiene_food.md",
+		"Гигиена пространства": "../../../KIDBOOK/hygiene/concepts/hygiene_at_your_place/hygiene_at_your_place.md",
+		"Микробы и их опасность": "../../../KIDBOOK/hygiene/concepts/microbs/microbs.md",
+		"Гигиена в общественных местах": "../../../KIDBOOK/hygiene/concepts/hygiene_at_the_public_places/hygiene_at_the_public_places.md",
+		"Личная защита и профилактика": "../../../KIDBOOK/hygiene/concepts/Personal-protection-and-prevention/Personal-protection-and-prevention.md",
+		"Сезонная гигиена": "../../../KIDBOOK/hygiene/concepts/Seasonal-hygiene/Seasonal-hygiene.md",
+        "Гигиена во время болезни": "../../../KIDBOOK/hygiene/concepts/Hygiene-during-illness/Hygiene-during-illness.md"
+    ],
+	"links" : {
+		"personal_hygiene.md": ["microbs.md", "hygiene_body_face.md", "hygiene_clothes_shoes.md", "hygiena_mouse.md"],
+		"hygiena_hands_and_nails.md": ["microbs.md", "hygiene_body_face.md", "hygiene_clothes_shoes.md", "hygiena_mouse.md"],
+		"hygiena_mouse.md": ["microbs.md", "hygiene_food.md"],
+		"hygiene_body_face.md": ["Hygiene-during-illness.md", "hygiena_hands_and_nails.md", "hygiene_nose_and_ear.md"],
+		"hygiene_clothes_shoes.md": ["hygiene_body_face.md"],
+		"hygiene_sleep.md": ["Personal-protection-and-prevention.md", "hygiene_at_your_place.md", "hygiene_food.md", "Hygiene-during-illness.md", "hygiene_body_face.md"],
+		"hygiene_nose_and_ear.md": [],
+		"hygiene_of_toys_and_personal _Items.md": ["Hygiene-during-illness.md"],
+		"hygiene_food.md": ["microbs.md", "hygiena_hands_and_nails.md"],
+		"hygiene_at_your_place.md": [],
+		"microbs.md": ["hygiena_hands_and_nails.md", "hygiena_mouse.md", "hygiene_food.md", "hygiene_at_your_place.md", "hygiene_body_face.md"],
+		"hygiene_at_the_public_places.md": ["hygiena_hands_and_nails.md", "hygiene_body_face.md"],
+		"Personal-protection-and-prevention.md": ["microbs.md", "hygiena_hands_and_nails.md", "hygiena_mouse.md", "hygiene_nose_and_ear.md", "hygiene_body_face.md", "hygiene_food", "hygiene_sleep", "Hygiene-during-illness.md"],
+		"Seasonal-hygiene.md": ["hygiene_body_face.md", "hygiena_hands_and_nails.md", "hygiene_body_face.md", "hygiene_at_the_public_places.md", "hygiene_nose_and_ear.md", "Personal-protection-and-prevention.md", "Hygiene-during-illness.md"],
+		"Hygiene-during-illness.md": ["microbs.md", "hygiene_body_face.md", "hygiena_hands_and_nails.md", "hygiene_nose_and_ear.md", "hygiene_at_your_place.md"]
+	}
+}
