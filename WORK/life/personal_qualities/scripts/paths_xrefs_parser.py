@@ -17,15 +17,17 @@ def find_links(content):
     normalized_concepts = {c.lower(): c for c in concepts}
     matches = re.findall(r'\[.*?\]\((?:\./)?(.*?\.md)\)', content)
     
-    valid_links = []
+    unique_links = set()
+    
     for match in matches:
         filename = os.path.basename(match)
-
         base_name = os.path.splitext(filename)[0]
+        
         if base_name.lower() in normalized_concepts:
-            valid_links.append(filename)
+            original_name = normalized_concepts[base_name.lower()] + ".md"
+            unique_links.add(original_name)
     
-    return valid_links
+    return list(unique_links)
 
 def generate_concepts_json():
     md_dir = kid_book_directory_path.resolve()
