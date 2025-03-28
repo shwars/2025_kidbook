@@ -13,13 +13,22 @@ script_dir = Path(__file__).resolve().parent
 kid_book_directory_path = script_dir / '../../../../KIDBOOK/life/personal_qualities'
 output_json_path = script_dir / '../data/concepts.json'
 
-def find_links(content, all_files):
-    matches = re.findall(r'\[.*?\]\((.*?\.md)\)', content) # Ищем все markdown-ссылки в формате [текст](filename.md)
-    return [f for f in matches if any(f.lower() == fname.lower() for fname in all_files)] # Фильтруем только существующие файлы из нашего списка
+def find_links(content):
+    normalized_concepts = {c.lower(): c for c in concepts}
+    matches = re.findall(r'\[.*?\]\((?:\./)?(.*?\.md)\)', content)
+    
+    valid_links = []
+    for match in matches:
+        filename = os.path.basename(match)
+
+        base_name = os.path.splitext(filename)[0]
+        if base_name.lower() in normalized_concepts:
+            valid_links.append(filename)
+    
+    return valid_links
 
 def generate_concepts_json():
     md_dir = kid_book_directory_path.resolve()
-    all_files = [f'{c}.md' for c in concepts]
     
     result = {
         "categories": {},
@@ -33,11 +42,10 @@ def generate_concepts_json():
         rel_path = os.path.relpath(md_path, output_json_path.parent)
         result["categories"][concept] = rel_path.replace('\\', '/')
 
-        # Парсим ссылки
         try:
             with open(md_path, 'r', encoding='utf-8') as f:
                 content = f.read()
-                links = find_links(content, all_files)
+                links = find_links(content)
                 result["links"][md_file] = links
         except FileNotFoundError:
             print(f'Warning: File {md_file} not found')
