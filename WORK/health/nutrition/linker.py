@@ -3,10 +3,13 @@ import re
 import pymorphy2
 import itertools
 
+from pathlib import Path
 from typing import Generator
 
 
-BASE_DIR = os.path.abspath(os.path.dirname(__file__))
+BASEDIR = Path(__file__).resolve()
+
+DIRPATH = Path(BASEDIR).parents[3] / 'KIDBOOK/health/nutrition'
 
 TERMS_FILENAMES = {
     'калории': 'calories.md',
@@ -31,6 +34,13 @@ TERMS_FILENAMES = {
     'витамины': 'vitamins.md',
 }
 
+REPLACEMENT_PATTERNS = [
+    # Находит слово или фразу, которая не является частью ссылки
+    r'(?<!\[)\b{}\b(?!\]\([^\)]*\))',
+    # Находит слово или фразу внутри ссылки
+    r'\[({})\]\(\s*[^\)]*\s*\)',
+]
+
 
 def get_norm_word(word: str) -> str:
     return pymorphy2.MorphAnalyzer().parse(word)[0].normal_form
@@ -54,20 +64,28 @@ def get_all_phrase_forms(phrase: str) -> Generator[tuple[str, ...], None, None]:
 
     yield from itertools.product(*word_forms)
 
-def add_text_links(filepath: str, terms_filenames: dict[str, str]) -> None:
+
+def add_text_links(
+    filepath: str,
+    terms_filepaths: dict[str, str],
+    replacement_patterns: list[str]
+) -> None:
     with open(filepath, 'r', encoding='utf-8') as file:
         text = file.read()
 
-    for term in terms_filenames:
+    for term, term_filepath in terms_filepaths.items():
         for phrase_form in get_all_phrase_forms(term):
             str_phrase_form = ' '.join(phrase_form)
-            pattern = rf'(?<!\[)\b{re.escape(str_phrase_form)}\b(?!\])'
+            patterns = r'|'.join(
+                pattern.format(re.escape(str_phrase_form))
+                for pattern in replacement_patterns
+            )
             text = re.sub(
-                pattern,
-                lambda match:
-                    (
-                        f'[{match.group(0)}]'
-                        f'({os.path.join(BASE_DIR, terms_filenames[term])})'
+                patterns,
+                lambda match: (
+                        f'[{match.group(1)}]({term_filepath})'
+                        if match.group(1)
+                        else f'[{match.group(0)}]({term_filepath})'
                     ),
                 text,
                 flags=re.IGNORECASE
@@ -77,16 +95,19 @@ def add_text_links(filepath: str, terms_filenames: dict[str, str]) -> None:
         file.write(text)
 
 
-def main(dirpath: str, terms_filenames: dict[str, str]) -> None:
+def main(
+    dirpath: str,
+    terms_filenames: dict[str, str],
+    replacement_patterns: list[str]
+) -> None:
     for filename in os.listdir(dirpath):
-        filepath = os.path.join(dirpath, filename)
+        filepath = Path(dirpath) / filename
 
         if not os.path.isfile(filepath) or not filename.endswith('.md'):
             continue
 
-        add_text_links(filepath, terms_filenames)
+        add_text_links(filepath, terms_filenames, replacement_patterns)
 
 
 if __name__ == '__main__':
-    directry = '../../../KIDBOOK/health/nutrition/'
-    main(os.path.join(BASE_DIR, directry), TERMS_FILENAMES)
+    main(DIRPATH, TERMS_FILENAMES, REPLACEMENT_PATTERNS)
