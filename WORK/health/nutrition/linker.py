@@ -38,7 +38,7 @@ REPLACEMENT_PATTERNS = [
     # Находит слово или фразу, которая не является частью ссылки
     r'(?<!\[)\b{}\b(?!\]\([^\)]*\))',
     # Находит слово или фразу внутри ссылки
-    r'\[({})\]\(\s*[^\)]*\s*\)',
+    r'\[({})\]\(\s*[^\)]*\s*\)'
 ]
 
 
@@ -87,6 +87,14 @@ def add_text_links(
                         if match.group(1)
                         else f'[{match.group(0)}]({term_filepath})'
                     ),
+                text,
+                flags=re.IGNORECASE
+            )
+            text = re.sub(
+                r'\[([^\]]+)\]\(([^\)]+)\)',
+                lambda match: (
+                    f'[{match.group(1)}]({match.group(2).strip()})'
+                ),
                 text,
                 flags=re.IGNORECASE
             )
