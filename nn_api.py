@@ -53,11 +53,11 @@ def get_wikidata_id(article_name, lang="ru"):
 
 def build_yandexgpt_prompt(folder_id, user_text):
     data = {
-        "modelUri": f"gpt://{folder_id}/yandexgpt-lite/latest",
+        "modelUri": f"gpt://{folder_id}/yandexgpt/latest",
         "completionOptions": {
             "stream": False,
             "temperature": 0.6,
-            "maxTokens": "1000",
+            "maxTokens": "5000",
             "reasoningOptions": {
                 "mode": "DISABLED"
             }
@@ -65,7 +65,7 @@ def build_yandexgpt_prompt(folder_id, user_text):
         "messages": [
             {
                 "role": "system",
-                "text": "Объясни текст десятилетнему ребенку"
+                "text": "Выдай в формате MarkDown объяснение текста десятилетнему ребенку, постарайся использовать возможности markdown по максимуму"
             },
             {
                 "role": "user",
@@ -102,25 +102,57 @@ def call_yandex_gpt(prompt_json):
     return response.json()
 
 def main():
-    # Можно изменить статью на любую другую
-    article_name = "Альберт Эйнштейн"
-    
-    wiki_text = get_wikidata_id(article_name, lang="ru")
-    print("==== Текст, полученный из Wikipedia ====")
-    print(wiki_text)
-
+    """
+    1. Считываем файл "список болезней.txt"
+    2. Для каждой болезни получаем данные из Wikipedia + Wikidata
+    3. Отправляем полученный текст в Yandex GPT
+    4. Ответ записываем в MD-файл в папку 'pages' (имя файла = название болезни + ".md").
+    """
     folder_id = os.environ.get("FOLDER_ID")
+    if not folder_id:
+        print("Не задана переменная окружения FOLDER_ID!")
+        return
     
-    prompt_json = build_yandexgpt_prompt(folder_id, wiki_text)
+    # Открываем файл со списком болезней
+    with open("list_diseases.txt", "r", encoding="utf-8") as f:
+        diseases = [line.strip() for line in f if line.strip()]
     
-    result = call_yandex_gpt(prompt_json)
+    # Убедимся, что папка 'pages' существует
+    pages_dir = "pages"
+    os.makedirs(pages_dir, exist_ok=True)
     
-    print("\n==== Ответ от Yandex GPT ====")
-    try:
-        gpt_text = result["result"]["alternatives"][0]["message"]["text"]
-        print(gpt_text)
-    except (KeyError, IndexError):
-        print("Не удалось найти корректный ответ в JSON:", result)
+    for disease in diseases:
+        print(f"\n=== Обработка: {disease} ===")
+        
+        # 1) Получаем текст из Wikipedia
+        wiki_text = get_wikidata_id(disease, lang="ru")
+        print("Полученный текст:")
+        print(wiki_text)
+        
+        # 2) Формируем prompt и вызываем GPT
+        prompt_json = build_yandexgpt_prompt(folder_id, wiki_text)
+        try:
+            result = call_yandex_gpt(prompt_json)
+        except Exception as e:
+            print(f"Ошибка при запросе к Yandex GPT: {e}")
+            continue
+        
+        # 3) Достаём ответ GPT
+        try:
+            gpt_text = result["result"]["alternatives"][0]["message"]["text"]
+        except (KeyError, IndexError):
+            print("Не удалось найти корректный ответ в JSON:", result)
+            gpt_text = "Ошибка в структуре ответа"
+        
+        # 4) Записываем ответ в файл .md в папке pages
+        safe_filename = disease.replace(" ", "_")  # заменяем пробелы на _
+        md_filename = os.path.join(pages_dir, f"{safe_filename}.md")
+        
+        with open(md_filename, "w", encoding="utf-8") as md_file:
+            md_file.write(gpt_text)
+        
+        print(f"Ответ записан в файл: {md_filename}")
+
 
 if __name__ == "__main__":
     main()
