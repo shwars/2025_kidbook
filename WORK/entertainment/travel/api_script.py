@@ -58,7 +58,6 @@ def get_chat_completion(auth_token, user_message):
 
 
 
-
 def main ():
     file = open("concepts/travel.md","w")
     term = input()
