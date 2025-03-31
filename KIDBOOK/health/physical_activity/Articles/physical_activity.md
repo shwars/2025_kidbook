@@ -1,4 +1,4 @@
-# physical_activity
+# Физическая активность
 
 **Что такое [физическая активность](./physical_activity.md)?**
 

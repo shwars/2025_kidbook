@@ -1,4 +1,4 @@
-# throwing_sport
+# Метание
 
 ### Что такое "[метание](./throwing_sport.md)"?
 
