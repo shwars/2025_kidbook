@@ -6,20 +6,7 @@ import getpass # Для безопасного ввода ключа
 from langchain_community.llms import GigaChat
 from langchain.chains import LLMChain
 from langchain_core.prompts import PromptTemplate
-# Убираем импорт ResponseError, т.к. обработка ошибок будет через LangChain
-# from gigachat.exceptions import ResponseError
 
-# --- ПРЕДУПРЕЖДЕНИЕ О БЕЗОПАСНОСТИ ---
-# НИКОГДА НЕ ВСТАВЛЯЙ СВОЙ КЛЮЧ АВТОРИЗАЦИИ (Authorization Key) ПРЯМО В ЭТОТ КОД!
-# ЕСЛИ ТЫ ЗАГРУЗИШЬ ЭТОТ ФАЙЛ НА GITHUB ИЛИ ПОДЕЛИТШСЯ ИМ, ТВОЙ КЛЮЧ УКРАДУТ!
-#
-# Вместо этого:
-# 1. Запусти скрипт.
-# 2. Он СПРОСИТ тебя ввести ключ в консоли (ввод будет скрыт).
-# Это гораздо безопаснее, чем хранить ключ в файле.
-# --------------------------------------
-
-# --- 1. Список твоих 15 тем ---
 TOPICS = [
     "Травля (Буллинг)",
     "Травля в школе",
