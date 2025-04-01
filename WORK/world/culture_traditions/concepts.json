@@ -1,0 +1,36 @@
+{
+    "categories": {
+      "Традиционные праздники": "../../../KIDBOOK/culture_traditions/concepts/traditional_holidays/traditional_holidays.md",
+      "Народные обряды": "../../../KIDBOOK/culture_traditions/concepts/folk_rituals/folk_rituals.md",
+      "Местные обычаи": "../../../KIDBOOK/culture_traditions/concepts/local_customs/local_customs.md",
+      "Культурное наследие": "../../../KIDBOOK/culture_traditions/concepts/cultural_heritage/cultural_heritage.md",
+      "Религиозные практики": "../../../KIDBOOK/culture_traditions/concepts/religious_practices/religious_practices.md",
+      "Традиционная одежда": "../../../KIDBOOK/culture_traditions/concepts/traditional_clothing/traditional_clothing.md",
+      "Традиционная кухня": "../../../KIDBOOK/culture_traditions/concepts/traditional_cuisine/traditional_cuisine.md",
+      "Искусство и ремёсла": "../../../KIDBOOK/culture_traditions/concepts/art_and_crafts/art_and_crafts.md",
+      "Музыка и танцы": "../../../KIDBOOK/culture_traditions/concepts/music_and_dances/music_and_dances.md",
+      "Язык и фольклор": "../../../KIDBOOK/culture_traditions/concepts/language_and_folklore/language_and_folklore.md",
+      "Архитектура": "../../../KIDBOOK/culture_traditions/concepts/architecture/architecture.md",
+      "Семейные ценности": "../../../KIDBOOK/culture_traditions/concepts/family_values/family_values.md",
+      "Обряды почитания предков": "../../../KIDBOOK/culture_traditions/concepts/ancestor_rituals/ancestor_rituals.md",
+      "Традиционные игры": "../../../KIDBOOK/culture_traditions/concepts/traditional_games/traditional_games.md",
+      "Природные символы": "../../../KIDBOOK/culture_traditions/concepts/natural_symbols/natural_symbols.md"
+    },
+    "links": {
+      "traditional_holidays.md": ["folk_rituals.md", "family_values.md", "cultural_heritage.md"],
+      "folk_rituals.md": ["ancestor_rituals.md", "religious_practices.md", "traditional_holidays.md"],
+      "local_customs.md": ["family_values.md", "traditional_clothing.md", "natural_symbols.md"],
+      "cultural_heritage.md": ["architecture.md", "language_and_folklore.md", "art_and_crafts.md"],
+      "religious_practices.md": ["ancestor_rituals.md", "folk_rituals.md", "traditional_holidays.md"],
+      "traditional_clothing.md": ["cultural_heritage.md", "local_customs.md", "natural_symbols.md"],
+      "traditional_cuisine.md": ["family_values.md", "traditional_holidays.md", "folk_rituals.md"],
+      "art_and_crafts.md": ["cultural_heritage.md", "natural_symbols.md"],
+      "music_and_dances.md": ["folk_rituals.md", "traditional_holidays.md", "cultural_heritage.md"],
+      "language_and_folklore.md": ["cultural_heritage.md", "folk_rituals.md"],
+      "architecture.md": ["cultural_heritage.md", "natural_symbols.md"],
+      "family_values.md": ["traditional_holidays.md", "local_customs.md", "traditional_cuisine.md"],
+      "ancestor_rituals.md": ["folk_rituals.md", "religious_practices.md"],
+      "traditional_games.md": ["family_values.md", "folk_rituals.md", "traditional_holidays.md"],
+      "natural_symbols.md": ["cultural_heritage.md", "traditional_clothing.md", "art_and_crafts.md"]
+    }
+  }
