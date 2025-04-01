@@ -1,136 +1,244 @@
 {
   "concepts": [
     {
-      "title": "Болезни",
+      "title": "болезни",
       "file": "main.md"
     },
     {
-      "title": "Симптомы",
+      "title": "симптомы",
       "file": "symptoms.md"
     },
     {
-      "title": "Методы лечения",
+      "title": "методы лечения",
       "file": "treatment_methods.md"
     },
     {
-      "title": "Предотвращение болезней",
+      "title": "предотвращение болезней",
       "file": "prevention.md"
     },
     {
-      "title": "Кашель",
+      "title": "кашель",
       "file": "cough.md"
     },
     {
-      "title": "Лихорадка",
+      "title": "лихорадка",
       "file": "fever.md"
     },
     {
-      "title": "Головная боль",
+      "title": "головная боль",
       "file": "headache.md"
     },
     {
-      "title": "Вакцинация",
+      "title": "вакцинация",
       "file": "vaccination.md"
     },
     {
-      "title": "Противовирусные препараты",
+      "title": "противовирусные препараты",
       "file": "antiviral.md"
     },
     {
-      "title": "Антибиотики",
+      "title": "антибиотики",
       "file": "antibiotics.md"
     },
     {
-      "title": "Коронавирус",
+      "title": "коронавирус",
       "file": "covid.md"
     },
     {
-      "title": "Астма",
+      "title": "астма",
       "file": "asthma.md"
     },
     {
-      "title": "Одышка",
+      "title": "одышка",
       "file": "shortness_of_breath.md"
     },
     {
-      "title": "Туберкулез",
+      "title": "туберкулез",
       "file": "tuberculosis.md"
     },
     {
-      "title": "Хронический бронхит",
+      "title": "хронический бронхит",
       "file": "bronchitis.md"
     },
     {
-      "title": "Ревматоидный артрит",
+      "title": "ревматоидный артрит",
       "file": "arthritis.md"
     },
     {
-      "title": "Пневмония",
+      "title": "пневмония",
       "file": "pneumonia.md"
     },
     {
-      "title": "Ангина",
+      "title": "ангина",
       "file": "tonsillitis.md"
     },
     {
-      "title": "Отит",
+      "title": "отит",
       "file": "otitis.md"
     },
     {
-      "title": "Менингит",
+      "title": "менингит",
       "file": "meningitis.md"
     },
     {
-      "title": "Краснуха",
+      "title": "краснуха",
       "file": "rubella.md"
     },
     {
-      "title": "Бешенство",
+      "title": "бешенство",
       "file": "rabies.md"
     },
     {
-      "title": "Инфекционные болезни",
+      "title": "инфекционные болезни",
       "file": "infectious_diseases.md"
     },
     {
-      "title": "Вирусные заболевания",
+      "title": "вирусные заболевания",
       "file": "viral_diseases.md"
     },
     {
-      "title": "Бактериальные инфекции",
+      "title": "бактериальные инфекции",
       "file": "bacterial_infections.md"
     },
     {
-      "title": "Грибковые заболевания",
+      "title": "грибковые заболевания",
       "file": "fungal_diseases.md"
     },
     {
-      "title": "Паразитарные болезни",
+      "title": "паразитарные болезни",
       "file": "parasitic_diseases.md"
     },
     {
-      "title": "Генетические заболевания",
+      "title": "генетические заболевания",
       "file": "genetic_diseases.md"
     },
     {
-      "title": "Иммунные заболевания",
+      "title": "иммунные заболевания",
       "file": "immune_diseases.md"
     },
     {
-      "title": "Хронические болезни",
+      "title": "хронические болезни",
       "file": "chronic_diseases.md"
     },
     {
-      "title": "Аллергия",
+      "title": "аллергия",
       "file": "allergies.md"
     },
     {
-      "title": "Аутоиммунные заболевания",
+      "title": "аутоиммунные заболевания",
       "file": "autoimmune_diseases.md"
     },
     {
-      "title": "Грипп",
+      "title": "грипп",
       "file": "gripp.md"
+    },
+    {
+      "title": "аллерген",
+      "file": "allergen.md"
+    },
+    {
+      "title": "аутоиммунитет",
+      "file": "autoimmune.md"
+    },
+    {
+      "title": "боль в спине",
+      "file": "backache.md"
+    },
+    {
+      "title": "боль в груди",
+      "file": "chest_ache.md"
+    },
+    {
+      "title": "боль",
+      "file": "pain.md"
+    },
+    {
+      "title": "вакцина",
+      "file": "vaccin.md"
+    },
+    {
+      "title": "вирус",
+      "file": "virus.md"
+    },
+    {
+      "title": "возбудитель заболевания",
+      "file": "возбудитель_заболевания.md"
+    },
+    {
+      "title": "воспаление",
+      "file": "воспаление.md"
+    },
+    {
+      "title": "зуд",
+      "file": "зуд.md"
+    },
+    {
+      "title": "изжога",
+      "file": "изжога.md"
+    },
+    {
+      "title": "иммунная система",
+      "file": "иммунная_система.md"
+    },
+    {
+      "title": "микоз",
+      "file": "микоз.md"
+    },
+    {
+      "title": "морская болезнь",
+      "file": "морская_болезнь.md"
+    },
+    {
+      "title": "озноб",
+      "file": "озноб.md"
+    },
+    {
+      "title": "отёк",
+      "file": "отёк.md"
+    },
+    {
+      "title": "патоген",
+      "file": "патоген.md"
+    },
+    {
+      "title": "патогенный гриб",
+      "file": "патогенный_гриб.md"
+    },
+    {
+      "title": "приобретённый иммунитет",
+      "file": "приобретённый_иммунитет.md"
+    },
+    {
+      "title": "прионы",
+      "file": "проины.md"
+    },
+    {
+      "title": "трансмиссивная губчатая энцефалопатия",
+      "file": "трансмиссивная_губчатая_энцефалопатия.md"
+    },
+    {
+      "title": "холера",
+      "file": "холера.md"
+    },
+    {
+      "title": "хрип",
+      "file": "хрип.md"
+    },
+    {
+      "title": "хроническая обструктивная болезнь лёгких",
+      "file": "хроническая_обструктивная_болезнь_лёгких.md"
+    },
+    {
+      "title": "чесотка",
+      "file": "Чесотка.md"
+    },
+    {
+      "title": "энцефалит",
+      "file": "энцефалит.md"
+    },
+    {
+      "title": "энцефалопатия",
+      "file": "энцефалопатия.md"
     }
   ]
 }

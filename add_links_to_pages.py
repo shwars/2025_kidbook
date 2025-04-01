@@ -1,6 +1,6 @@
 import os
 import re
-from pymorphy2 import MorphAnalyzer
+from pymorphy3 import MorphAnalyzer
 
 # Папка с Markdown файлами
 FOLDER_PATH = "pages"  # Укажи свою папку
@@ -62,4 +62,4 @@ keywords = extract_keywords(articles)
 updated_articles = insert_links(articles, keywords)
 save_updated_files(FOLDER_PATH, updated_articles)
 
-print("🔗 Ссылки вставлены во все статьи!")
+print("Success!")

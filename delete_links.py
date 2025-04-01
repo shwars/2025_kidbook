@@ -27,4 +27,4 @@ def process_markdown_files(folder):
 # Запускаем обработку
 process_markdown_files(FOLDER_PATH)
 
-print("✅ Все ссылки удалены, оставлен только текст!")
+print("Success!")
