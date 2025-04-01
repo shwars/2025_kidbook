@@ -24,7 +24,7 @@ def create_markdown_file(filename, content):
 
 
 # Подключаемся к GigaChat
-llm = GigaChat(credentials=('ZGZjNWY2YzUtZDI3Yy00ODRmLWIzOGEtYzA5YjhkN2I1OTVkOjEwMjA5ODJmLTc1MmItNDU0MS05NTQ5LTBjNDFmOThmMTY4Mw=='), verify_ssl_certs=False, model='GigaChat-Pro')
+llm = GigaChat(credentials=('token'), verify_ssl_certs=False, model='GigaChat-Pro')
 
 template = """
     Представь, что ты специалист по работе с детьми. Ты очень хорошо умеешь объяснять сложные темы простыми словами. Так же ты очень хорошо знаешь тему работы и карьеры. 
