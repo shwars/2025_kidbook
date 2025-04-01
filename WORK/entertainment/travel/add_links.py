@@ -24,7 +24,7 @@ definitions_dict = {
 
 }
 
-base_dir = '2025_kidbook/KIDBOOK/entertainment/travel'
+base_dir = 'KIDBOOK/entertainment/travel/concepts'
 
 
 # Функция для обработки одного файла
