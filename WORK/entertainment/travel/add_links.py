@@ -1,28 +1,11 @@
 import os
 import re
+import json
 
-definitions_dict = {
-    'автопутешествие': 'autotravel.md',
-    'авиация': 'avia.md',
-    'бэкпекинг': 'backpacking.md',
-    'велосипед': 'bicycle.md',
-    'судно': 'boat.md',
-    'бомж-тур': 'bomj.md',
-    'Автомобиль': 'car.md',
-    'Чемодан': 'chemod.md',
-    'Круиз': 'cruise.md',
-    'Снаряжение': 'gear.md',
-    'Рюкзак': 'knapsack.md',
-    'Багаж': 'luggage.md',
-    'Свадебное путешествие': 'merriage.md',
-    'Поезд': 'train.md',
-    'Транспорт': 'transport.md',
-    'Путешествия': 'travel.md',
-    'Виды путешествий': 'types.md',
-    'Велосипедный отпуск': 'velotravel.md',
-    'Кругосветное путешествие': 'world.md'
-
-}
+# Загрузка словаря определений из JSON-файла
+with open('WORK/entertainment/travel/definitions.json',
+          'r', encoding='utf-8') as file:
+    definitions_dict = json.load(file)
 
 base_dir = 'KIDBOOK/entertainment/travel/concepts'
 
