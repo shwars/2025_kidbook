@@ -1,0 +1,26 @@
+{
+    "categories": {
+        "Социальные навыки и взаимоотношения": {
+            "Дружба": "../../../KIDBOOK/life/relationships/дружба.md",
+            "Семья": "../../../KIDBOOK/life/relationships/семья.md",
+            "Командная работа": "../../../KIDBOOK/life/relationships/командная-работа.md",
+            "Лидерство": "../../../KIDBOOK/life/relationships/лидерство.md",
+            "Конфликты": "../../../KIDBOOK/life/relationships/конфликты.md",
+            "Эмпатия": "../../../KIDBOOK/life/relationships/эмпатия.md",
+            "Общение": "../../../KIDBOOK/life/relationships/общение.md",
+            "Разнообразие": "../../../KIDBOOK/life/relationships/разнообразие.md",
+            "Ссоры": "../../../KIDBOOK/life/relationships/ссоры.md",
+            "Забота о других": "../../../KIDBOOK/life/relationships/забота-о-других.md",
+            "Понимание себя": "../../../KIDBOOK/life/relationships/понимание-себя.md",
+            "Социальные навыки": "../../../KIDBOOK/life/relationships/социальные-навыки.md",
+            "Принятие решений": "../../../KIDBOOK/life/relationships/принятие-решений.md",
+            "Доброта": "../../../KIDBOOK/life/relationships/доброта.md",
+            "Поддержка": "../../../KIDBOOK/life/relationships/поддержка.md",
+            "Чувство вины и прощение": "../../../KIDBOOK/life/relationships/чувство-вины-и-прощение.md",
+            "Открытость": "../../../KIDBOOK/life/relationships/открытость.md",
+            "Уважение": "../../../KIDBOOK/life/relationships/уважение.md",
+            "Взаимопомощь": "../../../KIDBOOK/life/relationships/взаимопомощь.md",
+            "Мирное разрешение конфликтов": "../../../KIDBOOK/life/relationships/мирное-разрешение-конфликтов.md"
+        }
+    }
+}
