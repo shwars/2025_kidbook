@@ -7,7 +7,7 @@ def load_json(filename):
 
 
 def generate_mermaid(data):
-    lines = ["---", "config:", "  layout: elk", "---", "flowchart TD"]
+    lines = ["graph LR;"]
 
     for entity, relations in data.items():
         for relation, targets in relations.items():
@@ -15,7 +15,7 @@ def generate_mermaid(data):
                 f_entity = set_format(entity)
                 f_relation: str = set_format(relation)
                 f_target = set_format(target)
-                lines.append(f"  {f_entity} -->|{f_relation}| {f_target}")
+                lines.append(f"  {f_entity} -->|{f_relation}| {f_target};")
 
     return "\n".join(lines)
 
