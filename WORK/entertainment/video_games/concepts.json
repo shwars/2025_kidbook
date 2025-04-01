@@ -1,0 +1,19 @@
+{
+    "categories": {
+      "Компьютерная игра": "computer_game.md",
+      "Жанр игры": "game_janr.md", 
+      "Разработчик": "game_developers.md",
+      "Издатель": "game_publisher.md",
+      "Игровой движок": "game_engine.md",
+      "Игровая механика": "game_mechanics.md",
+      "Сюжет": "story.md",
+      "Игровой персонаж": "game_character.md",
+      "Многопользовательский режим": "multiplayer_mode.md",
+      "Игровое сообщество": "gaming_community.md",
+      "Киберспорт": "eSport.md",
+      "Дополненная реальность (AR)": "additional_reality.md",
+      "Виртуальная реальность (VR)": "vr.md",
+      "Геймификация": "gamification.md",
+      "Игровая платформа": "gaming_platform.md"
+    }
+}
