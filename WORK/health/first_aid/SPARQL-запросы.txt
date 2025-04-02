@@ -1,0 +1,132 @@
+You said:
+SELECT ?item ?itemLabel WHERE {
+  ?item wdt:P279 wd:Q8362.
+}
+LIMIT 15
+
+SELECT ?item ?itemLabel WHERE {
+  ?item wdt:P279 wd:Q11641.  
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+}
+LIMIT 15
+
+SELECT ?item ?itemLabel WHERE {
+  ?item rdfs:label "Технология"@ru.
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],ru". }
+}
+LIMIT 1
+
+SELECT ?subclass ?subclassLabel WHERE {
+  VALUES ?item { wd:Q133981 wd:Qxxxxxx wd:Qyyyyyy }  
+  ?subclass wdt:P279 ?item.  
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+}
+LIMIT 15
+
+SELECT ?item ?itemLabel WHERE {
+  ?item wdt:P921 wd:Q133981.  
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+}
+LIMIT 15
+
+SELECT ?item ?itemLabel ?subclass ?subclassLabel ?part ?partLabel WHERE {
+  ?item wdt:P279 wd:Q133981.  
+  ?subclass wdt:P279 ?item.  
+  OPTIONAL {
+    ?part wdt:P361 ?item.  
+  }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+}
+LIMIT 15
+
+
+You said:
+SELECT ?item ?itemLabel WHERE {
+  ?item wdt:P31 wd:Q1129137.
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "ru". }
+}
+LIMIT 10
+
+SELECT * WHERE {
+  wd:Q1129137 ?p ?o.
+} LIMIT 20
+
+SELECT ?item ?itemLabel WHERE {
+  ?item wdt:P31 wd:Q1400245.
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "ru". }
+}
+LIMIT 10
+
+SELECT ?item ?itemLabel ?description ?article WHERE {
+  VALUES ?topics {
+    wd:Q1129137  
+    wd:Q37698    
+    wd:Q48293    
+    wd:Q282      
+    wd:Q12197    
+  }
+  ?item wdt:P921 ?topics.  
+  
+  OPTIONAL { ?item schema:description ?description. FILTER(LANG(?description) = "ru") }
+  OPTIONAL { ?article schema:about ?item; schema:isPartOf <https://ru.wikipedia.org/>. }
+  
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "ru". }
+}
+LIMIT 15
+
+SELECT ?item ?itemLabel ?description ?article WHERE {
+  VALUES ?topics {
+    wd:Q1129137  
+  }
+
+  
+  { ?item wdt:P921 ?topics. }   
+  UNION
+  { ?item wdt:P279 ?topics. }   
+  UNION
+  { ?item wdt:P361 ?topics. }   
+
+  OPTIONAL { ?item schema:description ?description. FILTER(LANG(?description) = "ru") }
+  OPTIONAL { ?article schema:about ?item; schema:isPartOf <https://ru.wikipedia.org/>. }
+  
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "ru". }
+}
+LIMIT 15
+
+SELECT ?item ?itemLabel ?description ?article WHERE {
+  VALUES ?topics {
+    wd:Q1129137  
+    wd:Q37698    
+    wd:Q48293    
+    wd:Q282      
+    wd:Q12197    
+  }
+  ?item wdt:P31 ?topics.  
+  OPTIONAL { ?item schema:description ?description. FILTER(LANG(?description) = "ru") }
+  OPTIONAL { ?article schema:about ?item; schema:isPartOf <https://ru.wikipedia.org/>. }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "ru". }
+}
+
+SELECT ?item ?itemLabel WHERE {
+  ?item wdt:P31 wd:Q151646.  
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "ru". }
+}
+LIMIT 10
+
+
+SELECT ?subject ?label WHERE {
+  ?subject dct:subject dbc:First_aid.
+  ?subject rdfs:label ?label.
+  FILTER (lang(?label) = "ru")
+}
+LIMIT 10
+
+SELECT ?item ?itemLabel ?relation ?relationLabel ?subitem ?subitemLabel WHERE {
+  VALUES ?firstAid { wd:Q151646 } 
+  ?item ?relation ?firstAid.  
+  OPTIONAL { ?subitem wdt:P279 ?item. } 
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "ru". }
+}
+LIMIT 50
+
+

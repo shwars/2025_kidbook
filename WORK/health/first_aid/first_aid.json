@@ -1,0 +1,99 @@
+[
+    {
+      "item": "http://www.wikidata.org/entity/Q133981",
+      "itemLabel": "первая помощь",
+      "link": "https://ru.wikipedia.org/wiki/%D0%9F%D0%B5%D1%80%D0%B2%D0%B0%D1%8F_%D0%BF%D0%BE%D0%BC%D0%BE%D1%89%D1%8C#:~:text=%D0%9F%D0%B5%CC%81%D1%80%D0%B2%D0%B0%D1%8F%20%D0%BF%D0%BE%CC%81%D0%BC%D0%BE%D1%89%D1%8C%20%E2%80%94%20%D0%BA%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%81%20%D0%BC%D0%B5%D1%80%D0%BE%D0%BF%D1%80%D0%B8%D1%8F%D1%82%D0%B8%D0%B9%2C%20%D0%B2%D1%8B%D0%BF%D0%BE%D0%BB%D0%BD%D1%8F%D0%B5%D0%BC%D1%8B%D1%85,%D0%BF%D0%BE%D0%BC%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D1%8F%20%D0%B1%D0%BE%D0%BB%D1%8C%D0%BD%D0%BE%D0%B3%D0%BE%20%D0%B2%20%D0%BC%D0%B5%D0%B4%D0%B8%D1%86%D0%B8%D0%BD%D1%81%D0%BA%D0%BE%D0%B5%20%D1%83%D1%87%D1%80%D0%B5%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5.",
+      "relatedInstace": ["http://www.wikidata.org/entity/Q545991", "http://www.wikidata.org/entity/Q21893647", "http://www.wikidata.org/entity/Q1074604", "https://www.wikidata.org/wiki/Q337554", "https://www.wikidata.org/wiki/Q337554", "https://www.wikidata.org/wiki/Q166019", "https://www.wikidata.org/wiki/Q815867"]
+    },
+    {
+      "item": "http://www.wikidata.org/entity/Q545991",
+      "itemLabel": "искусственное дыхание",
+      "link": "https://ru.wikipedia.org/wiki/%D0%98%D1%81%D0%BA%D1%83%D1%81%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%BE%D0%B5_%D0%B4%D1%8B%D1%85%D0%B0%D0%BD%D0%B8%D0%B5",
+      "relatedInstace": ["http://www.wikidata.org/entity/Q133981", "https://www.wikidata.org/wiki/Property:P2239", "https://www.wikidata.org/wiki/Property:P924"]
+    },
+    {
+      "item": "http://www.wikidata.org/entity/Q21893647",
+      "itemLabel": "орошение в медицине",
+      "link": "https://ru.wikipedia.org/wiki/%D0%9E%D1%80%D0%BE%D1%88%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_%D0%BC%D0%B5%D0%B4%D0%B8%D1%86%D0%B8%D0%BD%D0%B5#:~:text=irrigatio%20%2D%D0%BE%D1%80%D0%BE%D1%88%D0%B5%D0%BD%D0%B8%D0%B5)%20%D0%B2%20%D0%BC%D0%B5%D0%B4%D0%B8%D1%86%D0%B8%D0%BD%D0%B5%20%2D,%D1%81%20%D0%BB%D0%B5%D1%87%D0%B5%D0%B1%D0%BD%D0%BE%D0%B9%20%D0%B8%D0%BB%D0%B8%20%D0%B3%D0%B8%D0%B3%D0%B8%D0%B5%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B9%20%D1%86%D0%B5%D0%BB%D1%8C%D1%8E.",
+      "relatedInstace": ["http://www.wikidata.org/entity/Q133981", "http://www.wikidata.org/entity/Q11190"]
+    },
+    {
+      "item": "http://www.wikidata.org/entity/Q1074604",
+      "itemLabel": "восстановительная поза",
+      "link": "https://ru.wikipedia.org/wiki/%D0%A3%D1%81%D1%82%D0%BE%D0%B9%D1%87%D0%B8%D0%B2%D0%BE%D0%B5_%D0%B1%D0%BE%D0%BA%D0%BE%D0%B2%D0%BE%D0%B5_%D0%BF%D0%BE%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5.",
+      "relatedInstace": ["http://www.wikidata.org/entity/Q133981"]
+    },
+    {
+      "item": "https://www.wikidata.org/wiki/Property:P2239",
+      "itemLabel": "меры первой помощи",
+      "link": "https://ru.wikipedia.org/wiki/%D0%9F%D0%B5%D1%80%D0%B2%D0%B0%D1%8F_%D0%BC%D0%B5%D0%B4%D0%B8%D1%86%D0%B8%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D0%BF%D0%BE%D0%BC%D0%BE%D1%89%D1%8C.",
+      "relatedInstace": ["http://www.wikidata.org/entity/Q545991", "https://www.wikidata.org/wiki/Q866650"]
+    },
+    {
+      "item": "https://www.wikidata.org/wiki/Property:P924",
+      "itemLabel": "лечение",
+      "link": "https://ru.wikipedia.org/wiki/%D0%A2%D0%B5%D1%80%D0%B0%D0%BF%D0%B8%D1%8F_(%D0%BB%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D0%B5)#:~:text=%D0%A2%D0%B5%D1%80%D0%B0%D0%BF%D0%B8%CC%81%D1%8F%20(%D0%B4%D1%80.,%D0%B6%D0%B8%D0%B7%D0%BD%D0%B5%D0%B4%D0%B5%D1%8F%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8%2C%20%D0%B2%D0%BE%D1%81%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B8%20%D1%83%D0%BB%D1%83%D1%87%D1%88%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B7%D0%B4%D0%BE%D1%80%D0%BE%D0%B2%D1%8C%D1%8F.",
+      "relatedInstace": ["http://www.wikidata.org/entity/Q545991"]
+    },
+    {
+      "item": "http://www.wikidata.org/entity/Q11190",
+      "itemLabel": "медицина",
+      "link": "https://ru.wikipedia.org/wiki/%D0%9C%D0%B5%D0%B4%D0%B8%D1%86%D0%B8%D0%BD%D0%B0#:~:text=medic%C4%ABna%2C%20%D0%BE%D1%82%20%D1%81%D0%BB%D0%BE%D0%B2%D0%BE%D1%81%D0%BE%D1%87%D0%B5%D1%82%D0%B0%D0%BD%D0%B8%D1%8F%20ars%20medicina,%D0%BF%D1%80%D0%BE%D0%B4%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B6%D0%B8%D0%B7%D0%BD%D0%B8%2C%20%D0%BF%D1%80%D0%B5%D0%B4%D1%83%D0%BF%D1%80%D0%B5%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B8%20%D0%BB%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D0%B5",
+      "relatedInstace": ["http://www.wikidata.org/entity/Q21893647", "https://www.wikidata.org/wiki/Q170518"]
+    },
+    {
+      "item": "https://www.wikidata.org/wiki/Q114953",
+      "itemLabel": "отравление",
+      "link": "https://ru.wikipedia.org/wiki/%D0%9E%D1%82%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5",
+      "relatedInstace": [""]
+    },
+    {
+      "item": "https://www.wikidata.org/wiki/Q866650",
+      "itemLabel": "укус",
+      "link": "https://ru.wikipedia.org/wiki/%D0%A3%D0%BA%D1%83%D1%81",
+      "relatedInstace": ["https://www.wikidata.org/wiki/Property:P2239"]
+    },
+    {
+      "item": "https://www.wikidata.org/wiki/Q337554",
+      "itemLabel": "солнечный удар",
+      "link": "https://ru.wikipedia.org/wiki/%D0%A1%D0%BE%D0%BB%D0%BD%D0%B5%D1%87%D0%BD%D1%8B%D0%B9_%D1%83%D0%B4%D0%B0%D1%80",
+      "relatedInstace": ["http://www.wikidata.org/entity/Q133981", "https://www.wikidata.org/wiki/Q178061"]
+    },
+    {
+      "item": "https://www.wikidata.org/wiki/Q166019",
+      "itemLabel": "кровотечение",
+      "link": "https://ru.wikipedia.org/wiki/%D0%9A%D1%80%D0%BE%D0%B2%D0%BE%D1%82%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D0%B5",
+      "relatedInstace": ["http://www.wikidata.org/entity/Q133981", "https://www.wikidata.org/wiki/Q184753"]
+    },
+    {
+      "item": "https://www.wikidata.org/wiki/Q184753",
+      "itemLabel": "рана",
+      "link": "https://ru.wikipedia.org/wiki/%D0%A0%D0%B0%D0%BD%D0%B0",
+      "relatedInstace": ["https://www.wikidata.org/wiki/Q166019"]
+    },
+    {
+      "item": "https://www.wikidata.org/wiki/Q170518",
+      "itemLabel": "ожог",
+      "link": "https://ru.wikipedia.org/wiki/%D0%9E%D0%B6%D0%BE%D0%B3",
+      "relatedInstace": ["https://www.wikidata.org/wiki/Q166019", "http://www.wikidata.org/entity/Q11190"]
+    },
+    {
+      "item": "https://www.wikidata.org/wiki/Q815867",
+      "itemLabel": "аптечка",
+      "link": "https://ru.wikipedia.org/wiki/%D0%90%D0%BF%D1%82%D0%B5%D1%87%D0%BA%D0%B0",
+      "relatedInstace": ["http://www.wikidata.org/entity/Q133981"]
+    },
+    {
+      "item": "https://www.wikidata.org/wiki/Q815867",
+      "itemLabel": "аптечка",
+      "link": "https://ru.wikipedia.org/wiki/%D0%90%D0%BF%D1%82%D0%B5%D1%87%D0%BA%D0%B0",
+      "relatedInstace": ["http://www.wikidata.org/entity/Q133981"]
+    },
+    {
+      "item": "https://www.wikidata.org/wiki/Q178061",
+      "itemLabel": "шок",
+      "link": "https://ru.wikipedia.org/wiki/%D0%A8%D0%BE%D0%BA",
+      "relatedInstace": ["https://www.wikidata.org/wiki/Q337554"]
+    }
+]
+  
