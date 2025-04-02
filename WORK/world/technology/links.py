@@ -15,7 +15,7 @@ def process_markdown_files(md_folder, concepts_file):
     
     file_to_terms = {}
     for term, filepath in term_to_definition_file.items():
-        file_to_terms.setdefault(filepath, set()).add(term)
+        file_to_terms.setdefault(Path(filepath), set()).add(term)
     
     morph = MorphAnalyzer()
     
@@ -23,7 +23,7 @@ def process_markdown_files(md_folder, concepts_file):
         with open(md_file, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        defining_terms = file_to_terms.get(md_file.name, set())
+        defining_terms = file_to_terms.get(Path(md_file.name), set())
         
         replacements = {}
         
@@ -58,7 +58,7 @@ def process_markdown_files(md_folder, concepts_file):
 
             pattern = re.compile(
                 rf'(?<![\[#])\b({search_phrase})\b(?!\s*[\]\)])',
-                re.IGNORECASE
+                re.IGNORECASE | re.UNICODE
             )
 
             content = pattern.sub(
