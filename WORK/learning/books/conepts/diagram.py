@@ -11,6 +11,8 @@ def generate_mermaid(data):
 
     for entity, relations in data.items():
         for relation, targets in relations.items():
+            if relation == "ссылка":
+                continue
             for target in targets:
                 f_entity = set_format(entity)
                 f_relation: str = set_format(relation)
