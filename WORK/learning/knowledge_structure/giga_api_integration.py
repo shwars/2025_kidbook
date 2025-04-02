@@ -11,7 +11,7 @@ token = os.environ.get("GIGACHAT_TOKEN")
 if not token:
     raise ValueError("Переменная окружения GIGACHAT_TOKEN не установлена!")
 
-concepts_dir = Path("../../../KIDBOOK/learning/knowledge_structure/concepts/")
+concepts_dir = Path("../../../KIDBOOK/learning/knowledge_structure/")
 concepts_dir.mkdir(parents=True, exist_ok=True)
 
 with open("concepts.json", "r", encoding="utf-8") as f:

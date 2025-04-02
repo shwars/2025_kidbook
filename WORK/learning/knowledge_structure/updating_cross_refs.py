@@ -6,7 +6,7 @@ import pymorphy3
 morph = pymorphy3.MorphAnalyzer()
 
 MAPPING_FILE = 'mapping.json'
-TARGET_DIRECTORY = "../../../KIDBOOK/learning/knowledge_structure/concepts"
+TARGET_DIRECTORY = "../../../KIDBOOK/learning/knowledge_structure"
 
 
 with open(MAPPING_FILE, 'r', encoding='utf-8') as f:
