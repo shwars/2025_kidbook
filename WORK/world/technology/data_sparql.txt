@@ -1,0 +1,96 @@
+SELECT DISTINCT 
+  ?item 
+  (SAMPLE(COALESCE(?itemLabelRu, ?itemLabelEn, "Без названия")) AS ?itemLabel)
+  (SAMPLE(?itemDescRu) AS ?itemDescriptionRu)
+  (SAMPLE(?itemDescEn) AS ?itemDescriptionEn)
+  (GROUP_CONCAT(DISTINCT ?propertyLabel; separator="||") AS ?properties)
+  (GROUP_CONCAT(DISTINCT ?valueLabel; separator="||") AS ?propertyValues)
+  (GROUP_CONCAT(DISTINCT ?image; separator="||") AS ?images)
+WHERE {
+  VALUES ?item {
+    # Понятия   из концептуализации
+    wd:Q144334   # Печатный станок
+    wd:Q83405    # Фабрика (Завод)
+    wd:Q11012    # Робот
+    wd:Q229367   # 3D-печать
+    
+    wd:Q16338    # Персональный компьютер
+    wd:Q75       # Интернет
+    wd:Q11035    # Телефон
+    wd:Q17517    # Мобильный телефон
+    wd:Q872      # Радио
+    
+    wd:Q1420     # Автомобиль
+    wd:Q870      # Поезд
+    wd:Q197      # Самолет
+    wd:Q11446    # Судно
+    
+    wd:Q12725    # Электричество
+    wd:Q12760    # Паровой двигатель
+    wd:Q4262     # Радиоизлучение (Радиоволны)
+    wd:Q14620    # Оптика
+    
+    # Мб пригодится, но в концепции этого пока нет
+    wd:Q8192     # Письменность
+    wd:Q446      # Колесо
+    wd:Q122653   # Система счисления
+    wd:Q376      # Часовой механизм
+    wd:Q21290872 # Порох
+    wd:Q1318740  # Электрическая лампа
+    wd:Q5339     # Транзистор
+    wd:Q11660    # Искусственный интеллект
+    wd:Q176555   # Квантовый компьютер
+  }
+
+  # Метки
+  OPTIONAL { ?item rdfs:label ?itemLabelRu FILTER(LANG(?itemLabelRu) = "ru") }
+  OPTIONAL { ?item rdfs:label ?itemLabelEn FILTER(LANG(?itemLabelEn) = "en") }
+
+  # Описания
+  OPTIONAL { ?item schema:description ?itemDescRu FILTER(LANG(?itemDescRu) = "ru") }
+  OPTIONAL { ?item schema:description ?itemDescEn FILTER(LANG(?itemDescEn) = "en") }
+
+  # Свойства и значения
+  OPTIONAL {
+    ?item ?propertyPredicate ?value .
+    VALUES ?propertyPredicate {
+      wdt:P61    # изобретатель
+      wdt:P571   # дата создания
+      wdt:P575   # дата изобретения
+      wdt:P366   # использование
+      wdt:P910   # категория
+      wdt:P527   # состоит из
+      wdt:P361   # часть
+      wdt:P154   # логотип
+      wdt:P18    # изображение
+      wdt:P9100  # область применения
+      wdt:P279   # подкласс
+      wdt:P31    # экземпляр
+      wdt:P1343  # описан в источнике
+    }
+    
+    # Получение читаемых меток свойств
+    ?property wikibase:directClaim ?propertyPredicate .
+    ?property rdfs:label ?propertyLabel FILTER(LANG(?propertyLabel) = "ru")
+
+    # Обработка значений
+    OPTIONAL {
+      ?value rdfs:label ?valueLabel FILTER(LANG(?valueLabel) = "ru")
+    }
+    
+    # Для дат используем числовой формат
+    BIND(
+      IF(?propertyPredicate IN (wdt:P571, wdt:P575), 
+         STR(YEAR(?value)), 
+         COALESCE(?valueLabel, STR(?value))
+      ) AS ?valueLabel
+    )
+  }
+
+  # Изображения
+  OPTIONAL {
+    ?item wdt:P18 ?image .
+  }
+}
+GROUP BY ?item
+ORDER BY ?itemLabel
