@@ -15,7 +15,7 @@ concepts = json_data.get("concepts", [])
 normalized_terms = {}
 for concept in concepts:
     file_name = f"{concept.replace(' ', '_')}.md"
-    link = f"KIDBOOK/learning/knowledge_structure/concepts/{file_name}"
+    link = f"{file_name}"
     norm = morph.parse(concept)[0].normal_form
     normalized_terms[norm] = (concept, link)
 
