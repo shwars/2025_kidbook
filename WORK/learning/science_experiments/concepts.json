@@ -8,9 +8,9 @@
   "../../../KIDBOOK/learning/science_experiments/data-collection-and-analysis/measurement.md": ["измерение"],
   "../../../KIDBOOK/learning/science_experiments/data-collection-and-analysis/statistics.md": ["статистика"],
 
-  "../../../KIDBOOK/learning/science_experiments/experiment-scientific-types/biological-experiment.md": ["биологический эксперимент"],
-  "../../../KIDBOOK/learning/science_experiments/experiment-scientific-types/chemical-experiment.md": ["химический эксперимент"],
-  "../../../KIDBOOK/learning/science_experiments/experiment-scientific-types/physical-experiment.md": ["физический эксперимент"],
+  "../../../KIDBOOK/learning/science_experiments/experiment-types/biological-experiment.md": ["биологический эксперимент"],
+  "../../../KIDBOOK/learning/science_experiments/experiment-types/chemical-experiment.md": ["химический эксперимент"],
+  "../../../KIDBOOK/learning/science_experiments/experiment-types/physical-experiment.md": ["физический эксперимент"],
   
   "../../../KIDBOOK/learning/science_experiments/experimental-design/experimental_design.md": ["экспериментальный дизайн"],
   "../../../KIDBOOK/learning/science_experiments/experimental-design/replication-and-reproducibility.md": ["репликация экспериментов", "повторяемость экспериментов"],
