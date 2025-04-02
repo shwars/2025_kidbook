@@ -1,7 +1,12 @@
 import os
 import re
+import json
 import pymorphy3
 from itertools import product
+
+def load_keywords_from_json(json_path):
+    with open(json_path, "r", encoding="utf-8") as file:
+        return json.load(file)
 
 def get_all_md_files(root_directory):
     md_files = []
@@ -48,25 +53,9 @@ def add_links_to_markdown(root_directory, keywords_map):
             
             print(f"Обновлен файл: {filepath}")
 
-keywords = {
-    "../../../KIDBOOK/learning/science_experiments/scientific-method/hypotesis.md": ["гипотеза"],
-    "../../../KIDBOOK/learning/science_experiments/scientific-method/scientific-methon.md": ["научный метод"],
-    "../../../KIDBOOK/learning/science_experiments/scientific-method/theory.md": ["теория"],
-    "../../../KIDBOOK/learning/science_experiments/scientific-method/watching.md": ["наблюдение"],
-
-    "../../../KIDBOOK/learning/science_experiments/data-collection-and-analysis/analysis.md":  ["анализ"],
-    "../../../KIDBOOK/learning/science_experiments/data-collection-and-analysis/measurement.md": ["измерение"],
-    "../../../KIDBOOK/learning/science_experiments/data-collection-and-analysis/statistics.md": ["статистика"],
-
-    "../../../KIDBOOK/learning/science_experiments/experiment-types/biological-experiment.md": ["биологический эксперимент"],
-    "../../../KIDBOOK/learning/science_experiments/experiment-types/chemical-experiment.md": ["химический эксперимент"],
-    "../../../KIDBOOK/learning/science_experiments/experiment-types/physical-experiment.md": ["физический эксперимент"],
-    
-    "../../../KIDBOOK/learning/science_experiments/experimental-design/experimental_design.md": ["экспериментальный дизайн"],
-    "../../../KIDBOOK/learning/science_experiments/experimental-design/replication-and-reproducibility.md": ["репликация экспериментов", "повторяемость экспериментов"],
-    "../../../KIDBOOK/learning/science_experiments/experimental-design/types-of-experiments .md": ["типы экспериментов"],
-    "../../../KIDBOOK/learning/science_experiments/experimental-design/variables-in-experiment.md": ["переменные в эксперименте"],
-}
+concepts_path = "concepts.json"
 root_directory = "../../../KIDBOOK/learning/science_experiments"
+
+keywords = load_keywords_from_json(concepts_path)
 
 add_links_to_markdown(root_directory, keywords)
