@@ -15,5 +15,9 @@
   "../../../KIDBOOK/learning/science_experiments/experimental-design/experimental_design.md": ["экспериментальный дизайн"],
   "../../../KIDBOOK/learning/science_experiments/experimental-design/replication-and-reproducibility.md": ["репликация экспериментов", "повторяемость экспериментов"],
   "../../../KIDBOOK/learning/science_experiments/experimental-design/types-of-experiments .md": ["типы экспериментов"],
-  "../../../KIDBOOK/learning/science_experiments/experimental-design/variables-in-experiment.md": ["переменные в эксперименте"]
+  "../../../KIDBOOK/learning/science_experiments/experimental-design/variables-in-experiment.md": ["переменные в эксперименте"],
+
+  "../../../KIDBOOK/learning/science_experiments/laboratory/laboratory.md": ["лаборатория"],
+  "../../../KIDBOOK/learning/science_experiments/laboratory/safety-rules.md": ["техника безопасности", "безопасность"],
+  "../../../KIDBOOK/learning/science_experiments/laboratory/equipment.md": ["оборудование", "инструменты"]
 }
