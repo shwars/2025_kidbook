@@ -1,49 +1,8 @@
 import os
-from modules.config import settings
+from modules.links import science_terms
 
-files_to_create = [
-    # ===== Formal science =====
-    "formal_science.md",
-    # Math
-    "math.md",
-    "algebra.md",
-    "statistics.md",
-    
-    # Logic
-    "logic.md",
-    
-    # Computer science
-    "computer_science.md",
-    "information_technology.md",
-    "artificial_intelligence.md",
-    
-    # ===== Natural science =====
-    "natural_science.md",
-    "physics.md",
-    "chemistry.md",
-    "biology.md",
-    
-    # ===== Science of life =====
-    "science_of_life.md",
-    "medicine.md",
-    "genetics.md",
-    "botanics.md",
-    "ecology.md",
-    
-    # ===== Social science =====
-    "social_science.md",
-    "psychology.md",
-    "sociology.md",
-    "economics.md",
-    "history.md",
-    
-    # ===== Earth and space science =====
-    "earth_and_space_science.md",
-    "astronomy.md",
-    "geology.md",
-    "geography.md",
-]
-
+def get_files_to_create() -> list:
+    return [term.lower().replace(' ', '_') for term in science_terms]
 
 def is_md_file_exists(directory: str, filename: str) -> bool:
     if not filename.endswith('.md'):

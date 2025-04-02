@@ -1,7 +1,6 @@
 import os
 from pymorphy3 import MorphAnalyzer
 from razdel import tokenize
-from typing import List
 
 morph_analyzer = MorphAnalyzer()
 
