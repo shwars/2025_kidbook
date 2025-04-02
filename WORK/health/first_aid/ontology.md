@@ -13,59 +13,45 @@ flowchart TD
     A --> M["Укусы"]
     A --> N["Шоковое состояние"]
     A --> O["Эпилепсия"]
-
     B --> C
     B --> D
     B --> A
     B --> L
-
     E --> C
     E --> N
-
     C --> D
     C --> B
     C --> N
-
     F --> B
     F --> A
     F --> L
     F --> K
-
     G --> L
     G --> H
     G --> K
     G --> D
     G --> A
-
     H --> E
     H --> K
-    H  --> A
-
+    H --> A
     I --> G
     I --> A
-
     J --> K
     J --> A
-
     D --> B
     D --> A
-
     K --> J
     K --> A
     K --> N
-
     L --> A
     L --> J
-
     M --> N
     M --> D
     M --> B
     M --> A
-
     N --> I
     N --> J
     N --> A
-
     O --> J
     O --> I
     O --> A
