@@ -7,12 +7,11 @@ giga = GigaChat(
     verify_ssl_certs=False,
 )
 
-def explain_for_kids(text: str) -> str:
+def explain_for_kids(text: str, max_tokens: int = 1000) -> str:
     payload = f"""
-        Firstconstraint
-        Second
+        Объясни для десятилетнего ребенка:
         {text}
     """
-    response = giga.chat(payload=payload)
+    response = giga.chat(payload=payload, max_tokens=max_tokens)
     
     return response.choices[0].message.content

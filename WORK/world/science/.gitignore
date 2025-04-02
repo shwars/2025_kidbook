@@ -9,5 +9,5 @@ wheels/
 
 # Environment
 .venv
-poetry.lock
+uv.lock
 .env
