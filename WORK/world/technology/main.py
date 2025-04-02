@@ -29,7 +29,7 @@ def generate_text(concept):
         "top_p": 0.1,  # Параметр top_p для контроля разнообразия ответов
         "n": 1,  # Количество возвращаемых ответов
         "stream": False,  # Потоковая ли передача ответов
-        "max_tokens": 512,  # Максимальное количество токенов в ответе
+        "max_tokens": 1024,  # Максимальное количество токенов в ответе
         "repetition_penalty": 1,  # Штраф за повторения
         "update_interval": 0  # Интервал обновления (для потоковой передачи)
     })
@@ -53,19 +53,52 @@ def create_md_file(path, concept):
     if md_content:
         if path == 'md_files': os.makedirs("md_files", exist_ok=True)
 
-        file_path = f"{path}/{concept.replace(' ', '_')}.md"
-
+        file_name = f"{concept.replace(' ', '_')}.md"
+        file_path = os.path.join(path, file_name)
         with open(file_path, "w", encoding="utf-8") as f:
-            f.write(md_content)
+           f.write(md_content)
 
         print(f"Markdown-страница '{concept}' создана: {file_path}")
 
+        # Обновление concepts.json
+        concepts_json_path = os.path.join(os.path.dirname(__file__), "concepts.json")
+        concept_key = concept.lower()  # Ключ в нижнем регистре
+
+        # Загрузка или создание данных
+        if os.path.exists(concepts_json_path):
+            with open(concepts_json_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+        else:
+            data = {"concepts": {}}
+
+        # Добавление новой записи
+        data["concepts"][concept_key] = file_name
+
+        # Сохранение обновлённых данных
+        with open(concepts_json_path, "w", encoding="utf-8") as f:
+            json.dump(data, f, ensure_ascii=False, indent=4)
+    else:
+        print(f"Не удалось создать файл для понятия '{concept}'")
+
+
+def capitalize_first_letter(s):
+    return s[0].upper() + s[1:] if s else s
+
+def extract_concepts(filename):
+    with open(filename, 'r', encoding='utf-8') as file:
+        data = json.load(file)
+    
+    return [capitalize_first_letter(item.get('itemLabel', '')) 
+            for item in data 
+            if item.get('itemLabel')]
+
 
 if __name__ == "__main__":
-    concepts = ['Азбука', 'Интернет', 'Электричество', 'Поезда']
+    concepts = extract_concepts('data_j.json')
+    print(concepts)
 
     base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../.."))
     target_dir = os.path.join(base_dir, "KIDBOOK", "world", "technology")
 
     for concept in concepts:
-        create_md_file(target_dir, concept)
+       create_md_file(target_dir, concept)

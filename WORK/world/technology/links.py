@@ -70,6 +70,6 @@ def process_markdown_files(md_folder, concepts_file):
             f.write(content)
 
 process_markdown_files(
-    md_folder='KIDBOOK/world/technology',
-    concepts_file='WORK/world/technology/concepts.json'
+    md_folder='../../../KIDBOOK/world/technology',
+    concepts_file='concepts.json'
 )
