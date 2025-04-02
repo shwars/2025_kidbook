@@ -1,3 +1,4 @@
 gigachat
 langchain_core
 pymorphy3
+dotenv
