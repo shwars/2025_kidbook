@@ -85,7 +85,7 @@ def update_text_with_links(text: str, current_term: str) -> str:
 def process_markdown_files():
     base_directory = os.path.abspath(os.path.join(
         os.path.dirname(__file__),
-        "../../../KIDBOOK/world/science"
+        "../../../../KIDBOOK/world/science"
     ))
 
     for file_name in os.listdir(base_directory):
