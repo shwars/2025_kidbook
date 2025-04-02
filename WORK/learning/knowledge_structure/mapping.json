@@ -1,0 +1,22 @@
+{
+    "Знание": "knowledge.md",
+    "Информация": "information.md",
+    "Память": "memory.md",
+    "Мышление": "thinking.md",
+    "Понятие": "concept.md",
+    "Категория": "category.md",
+    "Онтология": "ontology.md",
+    "Классификация": "classification.md",
+    "Таксономия": "taxonomy.md",
+    "Иерархия": "hierarchy.md",
+    "Конспект": "outline.md",
+    "Карта памяти": "mind_map.md",
+    "Скетчноутинг": "sketchnoting.md",
+    "Заметки Корнелла": "cornell_notes.md",
+    "Выделение главного": "key_points.md",
+    "Ассоциация": "association.md",
+    "Планирование изучения": "study_planning.md",
+    "Самопроверка знаний": "self_testing.md",
+    "Визуализация знаний": "knowledge_visualization.md",
+    "Повторение и закрепление материала": "review_and_reinforcement.md"
+}
