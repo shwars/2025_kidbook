@@ -57,7 +57,7 @@ def process_markdown_files(md_folder, concepts_file):
             search_phrase = form.replace('#', ' ') if '#' in form else form
 
             pattern = re.compile(
-                rf'(?<![\[#(])\b({search_phrase})\b(?!\s*[\]\)])',
+                rf'(?<![\[#])\b({search_phrase})\b(?!\s*[\]\)])',
                 re.IGNORECASE | re.UNICODE
             )
 
