@@ -56,7 +56,7 @@ def generate_text_with_gigachat(prompt: str, token: str) -> str:
         "model": "GigaChat",
         "messages": [{"role": "user", "content": prompt}],
         "temperature": 0.7,
-        "max_tokens": 300
+        "max_tokens": 1000
     }
     
     try:
