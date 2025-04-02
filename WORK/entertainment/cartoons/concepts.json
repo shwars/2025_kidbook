@@ -1,0 +1,19 @@
+{
+	"categories": {
+		"Мультфильм": "../../../KIDBOOK/entertainment/cartoons/concepts/cartoon.md",
+		"Аниматик": "../../../KIDBOOK/entertainment/cartoons/concepts/animatic.md",
+		"Рендер": "../../../KIDBOOK/entertainment/cartoons/concepts/render.md",
+		"Анимация": "../../../KIDBOOK/entertainment/cartoons/concepts/animation.md",
+		"Скелетная анимация": "../../../KIDBOOK/entertainment/cartoons/concepts/skeleton_animation.md",
+		"Анимационный цикл": "../../../KIDBOOK/entertainment/cartoons/concepts/animation_cycle.md",
+		"Спрайт": "../../../KIDBOOK/entertainment/cartoons/concepts/sprite.md",
+		"Фреймрейт": "../../../KIDBOOK/entertainment/cartoons/concepts/framerate.md",
+		"Фоли": "../../../KIDBOOK/entertainment/cartoons/concepts/foley.md",
+		"Липсинк": "../../../KIDBOOK/entertainment/cartoons/concepts/lip_sync.md",
+		"Моушн-дизайн": "../../../KIDBOOK/entertainment/cartoons/concepts/motion_design.md",
+		"Стоп-моушн": "../../../KIDBOOK/entertainment/cartoons/concepts/stop_motion.md",
+		"Раскадровка": "../../../KIDBOOK/entertainment/cartoons/concepts/storyboarding.md",
+		"Твининг": "../../../KIDBOOK/entertainment/cartoons/concepts/twinning.md",
+        "CGI": "../../../KIDBOOK/entertainment/cartoons/concepts/cgi.md"
+    }
+}
