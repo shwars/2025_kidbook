@@ -1,12 +1,15 @@
 import os
-import re
 from pathlib import Path
-import pymorphy3
 from typing import Dict, Tuple
+import pymorphy3
+import re
 
 morph = pymorphy3.MorphAnalyzer()
 
-JSON_DATA = {
+singleTerms: Dict[str, Tuple[str, str]] = {}
+multiTerms: Dict[str, Tuple[str, str]] = {}
+
+data = {
     "categories": {
         "Массовые открытые онлайн-курсы (MOOC)": "Массовые_открытые_онлайн-курсы_(MOOC).md",
         "Онлайн-курсы с сертификатами": "Онлайн-курсы_с_сертификатами.md",
@@ -26,68 +29,53 @@ JSON_DATA = {
     }
 }
 
-WORD_PATTERN = re.compile(r'\b[А-Яа-яЁё-]+\b')
-HEADER_PATTERN = re.compile(r'^\s{0,3}#{1,6}\s')
-LINKED_TEXT_PATTERN = re.compile(r'\[.*?\]\(.*?\)')
-
-SINGLE_WORD_TERMS: Dict[str, Tuple[str, str]] = {}
-MULTI_WORD_TERMS: Dict[str, Tuple[str, str]] = {}
-
-for term, path in JSON_DATA["categories"].items():
+for term, path in data["categories"].items():
     normalized = morph.parse(term)[0].normal_form
     if ' ' in term:
-        MULTI_WORD_TERMS[normalized] = (term, path)
+        multiTerms[normalized] = (term, path)
     else:
-        SINGLE_WORD_TERMS[normalized] = (term, path)
+        singleTerms[normalized] = (term, path)
 
-def replace_match(match: re.Match, current_file_stem: str) -> str:
+def change_match(match: re.Match, current_file_stem: str):
     original_text = match.group(0)
-    
-    for normalized_term, (original_term, path) in MULTI_WORD_TERMS.items():
+    for normalized_term, (original_term, path) in multiTerms.items():
         if original_text.lower() == original_term.lower():
             target_stem = Path(path).stem
             if target_stem != current_file_stem:
                 return f"[{original_text}]({path})"
             return original_text
-
     term = morph.parse(original_text)[0].normal_form
-    if term in SINGLE_WORD_TERMS:
-        _, link = SINGLE_WORD_TERMS[term]
+    if term in singleTerms:
+        _, link = singleTerms[term]
         target_stem = Path(link).stem
         if target_stem != current_file_stem:
             return f"[{original_text}]({link})"
-    
     return original_text
 
-def process_markdown_file(file_path: Path) -> None:
-    try:
-        with open(file_path, "r", encoding="utf-8") as f:
-            content = f.read()
-    except Exception as e:
-        print(f"Error reading file {file_path}: {str(e)}")
-        return
+wordPattern = re.compile(r'\b[А-Яа-яЁё-]+\b')
+headerPattern = re.compile(r'^\s{0,3}#{1,6}\s')
+textPattern = re.compile(r'\[.*?\]\(.*?\)')
 
+def parse_file(file_path):
+    with open(file_path, "r", encoding="utf-8") as f:
+        content = f.read()
     current_file_stem = file_path.stem
     updated_content = content
-    for _, (original_term, path) in MULTI_WORD_TERMS.items():
+    for _, (original_term, path) in multiTerms.items():
         target_stem = Path(path).stem
         if target_stem == current_file_stem:
             continue
         pattern = re.compile(r'(?<!\()\b' + re.escape(original_term) + r'\b(?!\))', re.IGNORECASE)
         updated_content = pattern.sub(f"[{original_term}]({path})", updated_content)
-    
     lines = updated_content.split('\n')
     updated_lines = []
-    
     for line in lines:
-        if HEADER_PATTERN.match(line) or LINKED_TEXT_PATTERN.search(line):
+        if headerPattern.match(line) or textPattern.search(line):
             updated_lines.append(line)
         else:
-            updated_line = WORD_PATTERN.sub(lambda m: replace_match(m, current_file_stem), line)
+            updated_line = wordPattern.sub(lambda m: change_match(m, current_file_stem), line)
             updated_lines.append(updated_line)
-    
-    updated_content = '\n'.join(updated_lines)
-    
+    updated_content = '\n'.join(updated_lines)  
     if updated_content != content:
         try:
             with open(file_path, "w", encoding="utf-8") as f:
@@ -98,22 +86,10 @@ def process_markdown_file(file_path: Path) -> None:
 
 def main():
     CONCEPTS_DIR = Path(os.getenv("CONCEPTS_DIR"))
-    if not CONCEPTS_DIR:
-        raise ValueError("The directory for processing markdown files is not set.")
-
-    md_files = list(CONCEPTS_DIR.glob("*.md"))
-    
-    if not md_files:
-        print("No .md files found for processing.")
-        return
-    
-    for md_file in md_files:
-        try:
-            process_markdown_file(md_file)
-        except Exception as e:
-            print(f"Error processing file {md_file}: {str(e)}")
-
-    print(f"Processing completed. Files processed: {len(md_files)}")
+    files = list(CONCEPTS_DIR.glob("*.md"))
+    for file in files:
+        parse_file(file)
+        
 
 if __name__ == "__main__":
     main()
