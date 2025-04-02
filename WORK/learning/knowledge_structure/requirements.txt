@@ -1,0 +1,3 @@
+gigachat
+langchain_core
+pymorphy3
