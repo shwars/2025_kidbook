@@ -8,7 +8,11 @@ def main():
     for filename in files_to_create:
         if not is_md_file_exists(settings.kidbook_path + '/world/science', filename):
             create_md_file(settings.kidbook_path + '/world/science', filename, filename)
+            print("Created file:", filename)
+        else:
+            print("File already exists:", filename)
             
+                 
             
             
     

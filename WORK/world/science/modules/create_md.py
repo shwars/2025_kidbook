@@ -3,6 +3,7 @@ from modules.config import settings
 
 files_to_create = [
     # ===== Formal science =====
+    "formal_science.md",
     # Math
     "math.md",
     "algebra.md",

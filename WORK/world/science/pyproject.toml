@@ -8,4 +8,6 @@ dependencies = [
     "gigachat>=0.1.39.post1",
     "pydantic>=2.11.1",
     "pydantic-settings>=2.8.1",
+    "tqdm>=4.67.1",
+    "wikipedia>=1.4.0",
 ]
