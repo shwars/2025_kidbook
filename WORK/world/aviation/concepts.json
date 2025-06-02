@@ -1,0 +1,19 @@
+{
+    "categories": {
+      "Авиация": "aviatsiya.md",
+      "Летательные аппараты": "letatelnye_apparaty.md",
+      "Самолёт": "samolet.md",
+      "Вертолёт": "vertolyot.md",
+      "Авиадвигатель": "aviadvigatel.md",
+      "Аэродинамика": "aerodinamika.md",
+      "Пилот": "pilot.md",
+      "Авиационная безопасность": "aviacionnaya_bezopasnost.md",
+      "Навигация": "navigatsiya.md",
+      "Авиакомпания": "aviakompaniya.md",
+      "Аэропорт": "aeroport.md",
+      "Взлётно-посадочная полоса": "vzletno_posadochnaya_polosa.md",
+      "Лётная школа": "letnaya_shkola.md",
+      "Правила полётов": "pravila_poletov.md"
+    }
+}
+  
