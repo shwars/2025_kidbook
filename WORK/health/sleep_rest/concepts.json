@@ -1,0 +1,24 @@
+{
+	"categories": {
+		"сон": "../../../KIDBOOK/health/sleep_rest/Сон.md",
+		"фазы сна": "../../../KIDBOOK/health/sleep_rest/Фазы_сна.md",
+		"дневной сон": "../../../KIDBOOK/health/sleep_rest/Дневной_сон.md",
+		"режим дня": "../../../KIDBOOK/health/sleep_rest/Режим_дня.md",
+		"сон и спорт": "../../../KIDBOOK/health/sleep_rest/Сон_и_cпорт.md",
+		"как сон помогает запоминать": "../../../KIDBOOK/health/sleep_rest/Как_сон_помогает_запоминать.md",
+		"ночной страх": "../../../KIDBOOK/health/sleep_rest/Ночной_страх.md",
+		"отдых": "../../../KIDBOOK/health/sleep_rest/Отдых.md",
+		"отдых без сна": "../../../KIDBOOK/health/sleep_rest/Отдых_без_сна.md",
+		"как правильно отдыхать": "../../../KIDBOOK/health/sleep_rest/Как_правильно_отдыхать.md",
+		"почему после отдыха бывают силы": "../../../KIDBOOK/health/sleep_rest/Почему_после_отдыха_бывают_силы.md",
+		"природа и отдых": "../../../KIDBOOK/health/sleep_rest/Природа_и_отдых.md",
+		"медитация и дыхание": "../../../KIDBOOK/health/sleep_rest/Медитация_и_дыхание.md",
+		"сказки и музыка перед сном": "../../../KIDBOOK/health/sleep_rest/Сказки_и_музыка_перед_сном.md",
+		"тихие игры и расслабление": "../../../KIDBOOK/health/sleep_rest/Тихие_игры_и_расслабление.md"
+	},
+	"images": {
+		"calm_games": "../../../KIDBOOK/health/sleep_rest/calm_games.webp",
+		"meditation": "../../../KIDBOOK/health/sleep_rest/meditation.png",
+		"nature_and_rest": "../../../KIDBOOK/health/sleep_rest/nature_and_rest.png"
+	}
+}

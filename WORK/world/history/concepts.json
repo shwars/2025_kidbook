@@ -1,0 +1,35 @@
+{
+	"categories": [
+		"Социальная история": "../../../KIDBOOK/world/history/social.md",
+		"Экономическая история": "../../../KIDBOOK/world/history/economic.md",
+		"Культурная история": "../../../KIDBOOK/world/history/culture.md",
+		"Религиозная история": "../../../KIDBOOK/world/history/culture.md",
+		"Научно-техническая история": "../../../KIDBOOK/world/history/science.md",
+		"Демографическая история": "../../../KIDBOOK/world/history/demography.md",
+		"Военная история": "../../../KIDBOOK/world/history/war.md",
+		"История повседневности": "../../../KIDBOOK/world/history/commonLife.md",
+		"Гендерная история": "../../../KIDBOOK/world/history/genders.md",
+		"История окружающей среды": "../../../KIDBOOK/world/history/environment.md",
+		"История идей": "../../../KIDBOOK/world/history/ideas.md",
+		"История колониализма и империализма": "../../../KIDBOOK/world/history/colonializm.md",
+		"История глобализации": "../../../KIDBOOK/world/history/globalization.md",
+		"История отдельных регионов и стран": "../../../KIDBOOK/world/history/regions.md"
+	],
+	"links" : {
+		"science.md": ["economic.md", "genders.md", "ideas.md", "globalization.md", "environment.md", "war.md", "demography.md", "regions.md", "colonializm.md", "social.md", "commonLife.md", "culture.md"],
+		"commonLife.md": ["economic.md", "demography.md", "regions.md", "social.md", "science.md", "culture.md"],
+		"colonializm.md": ["economic.md", "ideas.md", "environment.md", "regions.md", "social.md", "science.md", "culture.md"],
+		"demography.md": ["war.md", "social.md", "economic.md"],
+		"genders.md": ["economic.md", "genders.md", "science.md", "social.md", "political.md", "commonLife.md", "culture.md"],
+		"regions.md": ["economic.md", "genders.md", "ideas.md", "globalization.md", "environment.md", "war.md", "religion.md", "demography.md", "colonializm.md", "social.md", "science.md", "political.md", "commonLife.md"],
+		"culture.md": ["economic.md", "genders.md", "ideas.md", "war.md", "religion.md", "science.md", "social.md", "commonLife.md", "culture.md"],
+		"globalization.md": ["economic.md", "ideas.md", "globalization.md", "environment.md", "demography.md", "colonializm.md", "social.md", "science.md", "culture.md"],
+		"economic.md": ["economic.md", "globalization.md", "environment.md", "war.md", "social.md", "science.md", "commonLife.md", "culture.md"],
+		"war.md": ["economic.md", "ideas.md", "science.md", "political.md", "culture.md"],
+		"religion.md": ["ideas.md", "war.md", "social.md", "science.md", "commonLife.md", "culture.md"],
+		"social.md": ["economic.md", "genders.md", "ideas.md", "environment.md", "demography.md", "regions.md", "commonLife.md", "culture.md"],
+		"politic.md": ["war.md", "social.md", "economic.md"],
+		"evironment.md": ["economic.md", "ideas.md", "environment.md", "demography.md", "commonLife.md"],
+		"ideas.md": ["science.md", "social.md", "culture.md"]
+	}
+}
