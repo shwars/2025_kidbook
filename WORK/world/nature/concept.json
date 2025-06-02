@@ -1,0 +1,19 @@
+{
+    "concepts": {
+        "Природа": "../../../KIDBOOK/world/nature/природа.md",
+        "Неживая природа": "../../../KIDBOOK/world/nature/неживая_природа.md",
+        "Живая природа": "../../../KIDBOOK/world/nature/живая_природа.md",
+        "Горы": "../../../KIDBOOK/world/nature/горы.md",
+        "Воздух": "../../../KIDBOOK/world/nature/воздух.md",
+        "Грибы": "../../../KIDBOOK/world/nature/грибы.md",
+        "Микроорганизмы": "../../../KIDBOOK/world/nature/микроорганизмы.md",
+        "Животные": "../../../KIDBOOK/world/nature/животные.md",
+        "Растения": "../../../KIDBOOK/world/nature/растения.md",
+        "Млекопитающие": "../../../KIDBOOK/world/nature/млекопитающие.md",
+        "Птицы": "../../../KIDBOOK/world/nature/птицы.md",
+        "Рептилии": "../../../KIDBOOK/world/nature/рептилии.md",
+        "Рыбы": "../../../KIDBOOK/world/nature/рыбы.md",
+        "Почва": "../../../KIDBOOK/world/nature/почва.md",
+        "Вода": "../../../KIDBOOK/world/nature/вода.md"
+    }
+}
