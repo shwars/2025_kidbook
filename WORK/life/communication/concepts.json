@@ -1,0 +1,90 @@
+{
+    "Человек": [
+      { "relation": "использует", "target": "Язык", "type": "associative" },
+      { "relation": "проявляет", "target": "Эмоции", "type": "associative" }
+    ],
+    "Язык": [
+      { "relation": "состоит из", "target": "Слова", "type": "hierarchical" },
+      { "relation": "своей неоднозначностью может создать двоякий", "target": "Контекст", "type": "associative" }
+    ],
+    "Речь": [
+      { "relation": "может быть специфической в", "target": "Школа", "type": "associative" },
+      { "relation": "формируется на", "target": "Язык", "type": "associative" },
+      { "relation": "направлена к", "target": "Собеседник", "type": "associative" },
+      { "relation": "помогает выражать", "target": "Эмоции", "type": "associative" },
+      { "relation": "формируется благодаря", "target": "Слова", "type": "hierarchical" },
+      { "relation": "определяет", "target": "Контекст", "type": "hierarchical" },
+      { "relation": "определённого стиля свидетельствует о", "target": "Манеры", "type": "associative" }
+    ],
+    "Слова": [
+      { "relation": "могут указать на определённый", "target": "Контекст", "type": "associative" },
+      { "relation": "говорят о наличии или отсутствии", "target": "Манеры", "type": "associative" }
+    ],
+    "Тон разговора": [
+      { "relation": "определяет настроение", "target": "Речь", "type": "associative" },
+      { "relation": "могут зависеть от отношений с", "target": "Собеседник", "type": "associative" },
+      { "relation": "определяет наиболееe возможные дальнейшие", "target": "Эмоции", "type": "hierarchical" },
+      { "relation": "помогает определить нужный", "target": "Контекст", "type": "hierarchical" },
+      { "relation": "определяет приятность и конструктивность", "target": "Общение", "type": "associative" }
+    ],
+    "Эмоции": [
+      { "relation": "порождают тот или иной", "target": "Контекст", "type": "hierarchical" },
+      { "relation": "дают определённый тон", "target": "Речь", "type": "associative" }
+    ],
+    "Собеседник": [
+      { "relation": "является", "target": "Человек", "type": "associative" },
+      { "relation": "может быть в", "target": "Семья", "type": "hierarchical" },
+      { "relation": "может быть в", "target": "Школа", "type": "hierarchical" },
+      { "relation": "повышает свою привлекательность благодаря", "target": "Манеры", "type": "associative" },
+      { "relation": "может быть в", "target": "Интернет", "type": "hierarchical" }
+    ],
+    "Семья": [
+      { "relation": "состоит из", "target": "Человек", "type": "hierarchical" }
+    ],
+    "Школа": [
+      { "relation": "место для", "target": "Человек", "type": "associative" }
+    ],
+    "Интернет": [
+      { "relation": "является средством общения", "target": "Человек", "type": "associative" }
+    ],
+    "Манеры": [
+      { "relation": "включают в себя", "target": "Умение слушать", "type": "hierarchical" },
+      { "relation": "могут повлиять на общий", "target": "Тон разговора", "type": "associative" },
+      { "relation": "помогают при", "target": "Общение", "type": "associative" },
+      { "relation": "могут помочь проявлять вместо навязчивости", "target": "Инициатива", "type": "associative" }
+    ],
+    "Умение слушать": [
+      { "relation": "сдерживает", "target": "Эмоции", "type": "associative" },
+      { "relation": "повышает привлекательность в глазах", "target": "Собеседник", "type": "associative" },
+      { "relation": "свидетельствует о", "target": "Манеры", "type": "associative" },
+      { "relation": "помогает понять", "target": "Контекст", "type": "associative" }
+    ],
+    "Навязчивость": [
+      { "relation": "не приветствуется", "target": "Человек", "type": "associative" },
+      { "relation": "подразумевает лишние и несвоевременные", "target": "Слова", "type": "associative" },
+      { "relation": "чаще всего проявляется во время общения в", "target": "Школа", "type": "associative" },
+      { "relation": "влияет на", "target": "Контекст", "type": "hierarchical" },
+      { "relation": "влияет на общий", "target": "Тон разговора", "type": "hierarchical" }
+    ],
+    "Инициатива": [
+      { "relation": "приветствуется только в определённом", "target": "Контекст", "type": "associative" },
+      { "relation": "проявляется при взаимодействии с", "target": "Человек", "type": "associative" },
+      { "relation": "проявляется по отношении к", "target": "Собеседник", "type": "associative" },
+      { "relation": "в большинстве случаев необходима в", "target": "Интернет", "type": "associative" }
+    ],
+    "Общение": [
+      { "relation": "происходит между несколькими", "target": "Человек", "type": "associative" },
+      { "relation": "происходит на", "target": "Язык", "type": "associative" },
+      { "relation": "в большинстве случаев не обходится без", "target": "Слова", "type": "associative" },
+      { "relation": "вызывает", "target": "Эмоции", "type": "associative" },
+      { "relation": "существенно отличаясь от общения в других группах происходит в", "target": "Семья", "type": "associative" },
+      { "relation": "существенно отличаясь от общения в других группах происходит в", "target": "Интернет", "type": "associative" },
+      { "relation": "существенно отличаясь от общения в других группах происходит в", "target": "Школа", "type": "associative" },
+      { "relation": "различается в зависимости от", "target": "Контекст", "type": "associative" },
+      { "relation": "ухудшается, если проявлять", "target": "Навязчивость", "type": "associative" },
+      { "relation": "будет чаще, если проявлять", "target": "Инициатива", "type": "associative" },
+      { "relation": "невозможно без наличия", "target": "Собеседник", "type": "hierarchical" },
+      { "relation": "наделяет смыслом использование", "target": "Речь", "type": "hierarchical" },
+      { "relation": "складывается лучше, если у людей есть", "target": "Умение слушать", "type": "hierarchical" }
+    ]
+  }
