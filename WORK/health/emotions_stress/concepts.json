@@ -1,3 +1,66 @@
+[
+    {
+        "topic": "Травля (Буллинг)",
+        "file": "KIDBOOK/health/emotions_stress/travlya.md"
+    },
+    {
+        "topic": "Травля в школе",
+        "file": "KIDBOOK/health/emotions_stress/travlya_v_shkole.md"
+    },
+    {
+        "topic": "Интернет-травля (Кибербуллинг)",
+        "file": "KIDBOOK/health/emotions_stress/internettravlya.md"
+    },
+    {
+        "topic": "Физический буллинг",
+        "file": "KIDBOOK/health/emotions_stress/fizicheskij_bulling.md"
+    },
+    {
+        "topic": "Словесный буллинг",
+        "file": "KIDBOOK/health/emotions_stress/slovesnyj_bulling.md"
+    },
+    {
+        "topic": "Социальный буллинг",
+        "file": "KIDBOOK/health/emotions_stress/socialnyj_bulling.md"
+    },
+    {
+        "topic": "Агрессор (Обидчик)",
+        "file": "KIDBOOK/health/emotions_stress/agressor.md"
+    },
+    {
+        "topic": "Жертва (Пострадавший)",
+        "file": "KIDBOOK/health/emotions_stress/zhertva.md"
+    },
+    {
+        "topic": "Свидетель",
+        "file": "KIDBOOK/health/emotions_stress/svidetel.md"
+    },
+    {
+        "topic": "Чувства жертвы",
+        "file": "KIDBOOK/health/emotions_stress/chuvstva_zhertvy.md"
+    },
+    {
+        "topic": "Отличие буллинга от ссоры",
+        "file": "KIDBOOK/health/emotions_stress/otlichie_bullinga_ot_ssory.md"
+    },
+    {
+        "topic": "Что делать, если обижают тебя?",
+        "file": "KIDBOOK/health/emotions_stress/chto_delat_esli_obizhayut_tebya.md"
+    },
+    {
+        "topic": "Что делать, если видишь буллинг? (Роль свидетеля)",
+        "file": "KIDBOOK/health/emotions_stress/chto_delat_esli_vidish_bulling.md"
+    },
+    {
+        "topic": "Кому рассказать о буллинге? (Взрослые помощники)",
+        "file": "KIDBOOK/health/emotions_stress/komu_rasskazat_o_bullinge.md"
+    },
+    {
+        "topic": "Как остановить буллинг? (Дружба и Уважение)",
+        "file": "KIDBOOK/health/emotions_stress/kak_ostanovit_bulling.md"
+    }
+]
+
 {
 	"categories": {
 		"смущение": "../../../KIDBOOK/health/emotions_stress/смущение.md",
@@ -52,4 +115,3 @@
         "сон": "../../../KIDBOOK/health/emotions_stress/сон.md"
 	}
 }
-
