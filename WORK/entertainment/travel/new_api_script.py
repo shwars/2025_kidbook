@@ -153,7 +153,7 @@ def get_token(auth_token, scope='GIGACHAT_API_PERS'):
         return -1
 
 # Получение токена авторизации
-auth_token = "NzQ3YjhiNzctNjYxZC00YmRkLWIyYmUtOGViMDZjMzZiYWRmOjkzY2UzYWJhLTFmMjktNDc4My1iYzIyLWQzMjgzODI2MGExMw=="
+auth_token = "..."
 response = get_token(auth_token)
 if response != -1:
     token = response.json()['access_token']
