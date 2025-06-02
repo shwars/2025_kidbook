@@ -1,0 +1,59 @@
+@startuml Путешествия
+
+!theme plain
+
+/'top to bottom direction'/
+left to right direction
+
+(Путешествия) as Travel
+
+(Виды) as types
+    [Бэкпекинг] as Backpacking
+    [Свадебное путешествие] as Merriage
+    [Кругосветное путешествие] as World
+    [Бомж-тур] as Bomj
+    [Автопутешествие] as Autotravel
+    [Круиз] as Cruise
+    [Велосипедный отпуск] as Velotravel
+
+(Транспорт) as transport
+    [Авиация] as Avia
+    [Поезд] as Train
+    [Автомобиль] as Car
+    [Судно] as Boat
+    [Велосипед] as Bicycle
+    
+(Снаряжение) as gears
+    [Багаж] as Luggage
+    [Чемодан] as Chemod
+    [Рюкзак] as Knapsack
+
+Travel ---> types
+types -> Cruise
+types --> Backpacking
+types --> Bomj
+types --> Velotravel
+types --> Autotravel
+types --> Merriage
+types --> World
+
+Travel ---> transport
+transport --> Car
+transport --> Boat
+transport --> Avia
+transport --> Train
+transport --> Bicycle
+
+Travel ---> gears
+gears --> Luggage
+gears --> Chemod
+gears --> Knapsack
+
+Boat <|...|> Cruise
+Car <|...|> Autotravel
+Bicycle <|...|> Velotravel
+
+Chemod -|> Luggage
+Knapsack -|> Luggage
+
+@enduml
