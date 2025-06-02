@@ -1,0 +1,31 @@
+{
+  "categories": {
+    "Формальные науки": "../../../KIDBOOK/world/science/формальные-науки.md",
+    "Математика": "../../../KIDBOOK/world/science/математика.md",
+    "Алгебра": "../../../KIDBOOK/world/science/алгебра.md",
+    "Геометрия": "../../../KIDBOOK/world/science/геометрия.md",
+    "Статистика": "../../../KIDBOOK/world/science/статистика.md",
+    "Логика": "../../../KIDBOOK/world/science/логика.md",
+    "Компьютерные науки": "../../../KIDBOOK/world/science/компьютерные-науки.md",
+    "Информатика": "../../../KIDBOOK/world/science/informatika.md",
+    "Искусственный интеллект": "../../../KIDBOOK/world/science/искусственный-интеллект.md",
+    "Естественные науки": "../../../KIDBOOK/world/science/естественные-науки.md",
+    "Физика": "../../../KIDBOOK/world/science/физика.md",
+    "Химия": "../../../KIDBOOK/world/science/химия.md",
+    "Биология": "../../../KIDBOOK/world/science/биология.md",
+    "Науки о жизни": "../../../KIDBOOK/world/science/науки-о-жизни.md",
+    "Медицина": "../../../KIDBOOK/world/science/медицина.md",
+    "Генетика": "../../../KIDBOOK/world/science/генетика.md",
+    "Ботаника": "../../../KIDBOOK/world/science/ботаника.md",
+    "Экология": "../../../KIDBOOK/world/science/экология.md",
+    "Социальные науки": "../../../KIDBOOK/world/science/социальные-науки.md",
+    "Психология": "../../../KIDBOOK/world/science/психология.md",
+    "Социология": "../../../KIDBOOK/world/science/социология.md",
+    "Экономика": "../../../KIDBOOK/world/science/экономика.md",
+    "История": "../../../KIDBOOK/world/science/история.md",
+    "Науки о Земле и космосе": "../../../KIDBOOK/world/science/науки-о-земле-и-космосе.md",
+    "Астрономия": "../../../KIDBOOK/world/science/астрономия.md",
+    "Геология": "../../../KIDBOOK/world/science/геология.md",
+    "География": "../../../KIDBOOK/world/science/география.md"
+  }
+}
