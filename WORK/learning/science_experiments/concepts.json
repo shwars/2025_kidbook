@@ -1,0 +1,23 @@
+{
+  "../../../KIDBOOK/learning/science_experiments/scientific-method/hypotesis.md": ["гипотеза"],
+  "../../../KIDBOOK/learning/science_experiments/scientific-method/scientific-methon.md": ["научный метод"],
+  "../../../KIDBOOK/learning/science_experiments/scientific-method/theory.md": ["теория"],
+  "../../../KIDBOOK/learning/science_experiments/scientific-method/watching.md": ["наблюдение"],
+
+  "../../../KIDBOOK/learning/science_experiments/data-collection-and-analysis/analysis.md":  ["анализ"],
+  "../../../KIDBOOK/learning/science_experiments/data-collection-and-analysis/measurement.md": ["измерение"],
+  "../../../KIDBOOK/learning/science_experiments/data-collection-and-analysis/statistics.md": ["статистика"],
+
+  "../../../KIDBOOK/learning/science_experiments/experiment-types/biological-experiment.md": ["биологический эксперимент"],
+  "../../../KIDBOOK/learning/science_experiments/experiment-types/chemical-experiment.md": ["химический эксперимент"],
+  "../../../KIDBOOK/learning/science_experiments/experiment-types/physical-experiment.md": ["физический эксперимент"],
+  
+  "../../../KIDBOOK/learning/science_experiments/experimental-design/experimental_design.md": ["экспериментальный дизайн"],
+  "../../../KIDBOOK/learning/science_experiments/experimental-design/replication-and-reproducibility.md": ["репликация экспериментов", "повторяемость экспериментов"],
+  "../../../KIDBOOK/learning/science_experiments/experimental-design/types-of-experiments .md": ["типы экспериментов"],
+  "../../../KIDBOOK/learning/science_experiments/experimental-design/variables-in-experiment.md": ["переменные в эксперименте"],
+
+  "../../../KIDBOOK/learning/science_experiments/laboratory/laboratory.md": ["лаборатория"],
+  "../../../KIDBOOK/learning/science_experiments/laboratory/safety-rules.md": ["техника безопасности", "безопасность"],
+  "../../../KIDBOOK/learning/science_experiments/laboratory/equipment.md": ["оборудование", "инструменты"]
+}
