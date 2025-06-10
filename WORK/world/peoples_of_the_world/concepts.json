@@ -1,0 +1,20 @@
+{
+    "categories": {
+      "Народ": "people.md",
+      "Культура": "culture.md",
+      "Этническая группа": "ethnic_group.md",
+      "Народное искусство": "folk_art.md",
+      "Язык": "language.md",
+      "Религия": "religion.md",
+      "Государство": "state.md",
+      "Образ жизни": "way_of_life.md",
+      "Демография": "demography.md",
+      "Этнос": "ethnos.md",
+      "История": "history.md",
+      "Миграции": "migrations.md",
+      "Регион": "region.md",
+      "Самоидентификация": "self_identification.md",
+      "Традиция": "tradition.md"
+    }
+  }
+  
